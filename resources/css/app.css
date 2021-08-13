@@ -9,6 +9,18 @@
     select,
     a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        @apply uppercase font-bold pb-1 hover:border-b-2 hover:border-black;
+    }
+
+    button {
+        @apply hover:border-0;
+    }
+    p {
+        @apply mb-4;
+    }
+
+    a > span {
+        @apply text-coolGray-350 ml-2 font-light lowercase;
     }
 
     body {
@@ -22,25 +34,35 @@
 
     @font-face {
         font-family: Montserrat;
-        src: url(/fonts/montserrat/Montserrat-Medium.otf);
-        font-weight: 300;
-    }
-
-    @font-face {
-        font-family: Montserrat;
         src: url(/fonts/montserrat/Montserrat-Bold.otf);
         font-weight: 700;
     }
 
     @font-face {
         font-family: Montserrat;
-        src: url(/fonts/montserrat/Montserrat-Thin.otf);
-        font-weight: 100;
+        src: url(/fonts/montserrat/Montserrat-Medium.otf);
+        font-weight: 500;
     }
 
     @font-face {
         font-family: Montserrat;
         src: url(/fonts/montserrat/Montserrat-Light.otf);
-        font-weight: 200;
+        font-weight: 300;
+    }
+}
+
+@layer components {
+    .card-favourite {
+        @apply absolute top-0 right-0 border border-black hover:border-lime-350 rounded-full p-1;
+    }
+    .btn-round-black {
+        @apply rounded-full bg-black text-lime-350 font-medium px-10 py-3 mt-4 hover:text-white hover:shadow-lg;
+    }
+
+    .section {
+        @apply my-20;
+    }
+    .section-header-lime {
+        @apply bg-section bg-no-repeat bg-lime-350 text-2xl font-bold uppercase text-center py-2;
     }
 }

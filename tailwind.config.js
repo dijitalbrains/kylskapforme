@@ -10,7 +10,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-          'header': "url('/images/header-bg.png')",
+          'header': "url('/images/bg-header.png')",
+          'footer': "url('/images/bg-footer.png')",
+          'section': "url('/images/bg-section.png')",
       }),
       colors: {
         lime: {
