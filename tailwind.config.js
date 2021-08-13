@@ -11,7 +11,15 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
           'header': "url('/images/header-bg.png')",
-      })
+      }),
+      colors: {
+        lime: {
+          350: "#C0F248"
+        },
+        coolGray: {
+          350: "#9A9A9A"
+        }
+      },
     },
     fontFamily: {
       body: ['Montserrat']
@@ -22,10 +30,13 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       lime: colors.lime,
+      coolGray: colors.coolGray,
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover'],
+    },
   },
   plugins: [],
 }
