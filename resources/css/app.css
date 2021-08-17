@@ -9,22 +9,26 @@
     select,
     a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        @apply uppercase font-bold pb-1 hover:border-b-2 hover:border-black;
     }
 
-    button {
-        @apply hover:border-0;
-    }
-    p {
-        @apply mb-4;
+    a {
+        @apply uppercase font-bold pb-1 hover:border-b-2 hover:border-black;
     }
 
     a > span {
         @apply text-coolGray-350 ml-2 font-light lowercase;
     }
 
+    input[type='radio'] {
+        @apply mr-2;
+    }
+
+    p {
+        @apply mb-4;
+    }
+
     body {
-        @apply font-body text-sm mb-96;
+        @apply font-body text-sm;
     }
 
     @font-face {

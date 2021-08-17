@@ -18,6 +18,9 @@ module.exports = {
         lime: {
           350: "#C0F248"
         },
+        trueGray: {
+          250: "#E6E6E6"
+        },
         coolGray: {
           350: "#9A9A9A"
         }
@@ -32,13 +35,21 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       lime: colors.lime,
+      trueGray: colors.trueGray,
       coolGray: colors.coolGray,
+      indigo: colors.indigo,
     }
   },
   variants: {
     extend: {
-      borderWidth: ['hover'],
+        backgroundColor: ['checked'],
+        borderColor: ['checked'],
+        borderWidth: ['hover'],
     },
   },
-  plugins: [],
+  plugins: [
+      require("@tailwindcss/forms")({
+        strategy: 'class',
+        }),
+  ],
 }
