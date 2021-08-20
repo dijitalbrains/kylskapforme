@@ -19,8 +19,12 @@
         @apply text-coolGray-350 ml-2 font-light lowercase;
     }
 
+    label {
+        @apply cursor-pointer;
+    }
+
     input[type='radio'] {
-        @apply mr-2;
+        @apply checked:bg-black focus:bg-black focus:border-transparent border-black focus:text-black focus:ring-1 focus:ring-black mr-2;
     }
 
     p {

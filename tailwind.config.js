@@ -25,6 +25,9 @@ module.exports = {
           350: "#9A9A9A"
         }
       },
+      spacing: {
+          'inherit': 'inherit'
+      }
     },
     fontFamily: {
       body: ['Montserrat']
@@ -42,7 +45,7 @@ module.exports = {
   },
   variants: {
     extend: {
-        backgroundColor: ['checked'],
+        backgroundColor: ['checked', 'hover'],
         borderColor: ['checked'],
         borderWidth: ['hover'],
     },
