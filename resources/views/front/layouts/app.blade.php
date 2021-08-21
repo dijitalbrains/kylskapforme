@@ -11,73 +11,62 @@
     <title>Kylskap For Me @yield('title')</title>
 </head>
 
-<body x-data="{ isSidebarOpen: true }" :class="{'overflow-y-hidden' : isSidebarOpen }">
+<body x-data="{ isSidebarOpen: false }" :class="{'overflow-y-hidden' : isSidebarOpen }">
 
     {{-- Container --}}
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
 
         {{-- Header --}}
-        <div
-            class="bg-header py-12 bg-contain bg-no-repeat bg-right-top flex justify-between content-center items-center">
-            <img src="{{asset('/images/logo.svg')}}" class="w-1/6">
+        <header>
+            <img src="{{asset('/images/logo.svg')}}"
+                class="p-2 sm:p-0 bg-white max-w-max w-2/3 sm:w-1/4 lg:w-1/6 relative top-0 sm:top-3 lg:top-0">
 
             {{-- Search Bar --}}
-            <div class="bg-black rounded-full text-white p-1 pl-3 mr-64 w-1/3 flex items-center font-light">
+            <div class="search-bar">
                 <div class="flex justify-between flex-grow mr-3">
                     <span>Sök ditt kylskåp:</span>
                     <input type="text" class="flex-grow mx-2 bg-transparent focus:outline-none">
                     <span>5899 kylskåp</span>
                 </div>
                 <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current text-lime-350"
-                        viewBox="0 0 20 20">
-                        <path d="M9 9a2 2 0 114 0 2 2 0 01-4 0z" />
-                        <path fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a4 4 0 00-3.446 6.032l-2.261 2.26a1 1 0 101.414 1.415l2.261-2.261A4 4 0 1011 5z"
-                            clip-rule="evenodd" />
-                    </svg>
+                    <x-svg-search-circle class="h-8 w-8 fill-current text-lime-350"></x-svg-search-circle>
                 </span>
             </div>
 
             {{-- Login/Register --}}
-            <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current text-lime-350" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                        clip-rule="evenodd" />
-                </svg>
-                <a href="javascript:void(0)" class="ml-8 mr-12 border-b-2 border-lime-350">
+            <div class="flex items-center bg-white ml-auto mr-5 mt-2 lg:m-0">
+                <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
+                <a href="javascript:void(0)" class="ml-4 xl:ml-8 xl:mr-12 border-b-2 border-lime-350">
                     Logga in / Registrera Dig
                 </a>
             </div>
 
-        </div>
+        </header>
 
         {{-- All Filter --}}
-        <div class="grid grid-cols-5 gap-x-3 gap-y-6 items-center uppercase font-bold mb-14">
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 gap-y-3 sm:gap-y-4 xl:gap-y-6 items-center uppercase font-bold mb-14">
 
             <div>
-                <button class="bg-black rounded-full text-white pl-6 pr-5 py-2 uppercase font-medium hover:shadow-lg"
+                <button
+                    class="bg-black rounded-full text-white pl-6 pr-5 py-1.5 xl:py-2 uppercase font-medium hover:shadow-lg"
                     @click="isSidebarOpen = true">
-                    Alla filter
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block ml-3 text-lime-350" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
+                    <span class="relative top-px">Alla filter</span>
+                    <x-svg-chevron-down class="h-6 w-6 inline-block ml-3 text-lime-350"></x-svg-chevron-down>
                 </button>
             </div>
 
             <div>
-                <a href="javascript:void(0)" class="border-b-2 border-lime-350">
-                    Fristående kylskåP
-                    <span>250 st</span>
+                <a href="javascript:void(0)" class="border-lime-350">
+                    <span class="truncate">Fristående kylskåP</span>
+                    <span class="filter-preset-count">250 st</span>
                 </a>
             </div>
 
             @for ($i = 1; $i <= 8; $i++) <div>
-                <a href="javascript:void(0)">
-                    Kombinerad kyl och frysa
-                    <span>250 st</span>
+                <a href="javascript:void(0)" class="border-white inline-flex filter-preset">
+                    <span class="truncate flex-1">Kombinerad kyl och frysa</span>
+                    <span class="filter-preset-count">250 st</span>
                 </a>
         </div>
         @endfor
@@ -86,22 +75,22 @@
     {{$slot}}
 
     {{-- Footer --}}
-    <div class="bg-footer bg-black px-12 py-16 bg-contain bg-no-repeat bg-left-top mt-20">
+    <footer>
         <div class="grid grid-cols-4 gap-x-20 uppercase text-white">
             <div>
                 <div class="font-bold mb-4">FORME</div>
 
                 <ul>
-                    <li><a href="javascript:void(0)" class="font-normal text-lime-350">Om forme</a></li>
-                    <li><a href="javascript:void(0)" class="font-normal">Press och annonsering</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal border-black text-lime-350">Om forme</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal border-black">Press och annonsering</a></li>
                 </ul>
             </div>
             <div>
                 <div class="font-bold mb-4">KONTAKT OCH HJÄLP</div>
 
                 <ul>
-                    <li><a href="javascript:void(0)" class="font-normal">Kontakta oss</a></li>
-                    <li><a href="javascript:void(0)" class="font-normal">FAQ</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal border-black">Kontakta oss</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal border-black">FAQ</a></li>
                 </ul>
             </div>
             <div>
@@ -109,7 +98,7 @@
             </div>
             <img src="{{asset('/images/logo-white.svg')}}">
         </div>
-    </div>
+    </footer>
 
 
     {{-- Sidebar --}}

@@ -12,11 +12,7 @@
     }
 
     a {
-        @apply uppercase font-bold pb-1 hover:border-b-2 hover:border-black;
-    }
-
-    a > span {
-        @apply text-coolGray-350 ml-2 font-light lowercase;
+        @apply uppercase font-bold pb-1 border-b-2 hover:border-black;
     }
 
     label {
@@ -32,7 +28,8 @@
     }
 
     body {
-        @apply font-body text-sm;
+        @apply font-body;
+        font-size: 13px;
     }
 
     @font-face {
@@ -60,6 +57,25 @@
 }
 
 @layer components {
+    header {
+        @apply bg-header pt-6 pb-3 lg:py-10 xl:py-12 mb-4 lg:mb-0 bg-contain lg:bg-cover xl:bg-contain bg-repeat-y lg:bg-no-repeat bg-top xl:bg-right-top flex justify-between content-center items-center flex-wrap lg:flex-nowrap;
+    }
+
+    footer {
+        @apply bg-footer bg-black px-12 py-16 bg-contain bg-no-repeat bg-left-top mt-20;
+    }
+
+    .search-bar {
+        @apply bg-black rounded-full text-white p-1 pl-3 m-0 mt-4 sm:mt-0 sm:mx-5 xl:mr-40 w-full sm:w-2/3 lg:w-1/2 xl:w-2/5 flex items-center font-light text-xs;
+    }
+
+    .filter-preset {
+        max-width: calc(100% - 5px);
+    }
+
+    .filter-preset-count {
+        @apply text-coolGray-350 ml-1 font-light lowercase;
+    }
     .card-favourite {
         @apply absolute top-0 right-0 border border-black hover:border-lime-350 rounded-full p-1;
     }
@@ -71,6 +87,20 @@
         @apply my-20;
     }
     .section-header-lime {
-        @apply bg-section bg-no-repeat bg-lime-350 text-2xl font-bold uppercase text-center py-2;
+        @apply bg-section bg-contain bg-no-repeat bg-lime-350 text-2xl font-bold uppercase text-center py-2;
+    }
+
+    /* sm: 640px */
+    @media (min-width: 640px) {
+        header {
+            background-position-x: 40%;
+        }
+    }
+
+    /* md: 768px */
+    @media (min-width: 768px) {
+        .search-bar {
+            font-size: 13px;
+        }
     }
 }

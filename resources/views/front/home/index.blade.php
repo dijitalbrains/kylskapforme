@@ -1,6 +1,6 @@
 <x-app-layout>
     {{-- Products Grid --}}
-    <div class="grid grid-cols-3 gap-x-12 gap-y-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
 
         {{-- Product Card --}}
         @for ($i = 0; $i < 9; $i++) <x-product-card>
@@ -15,7 +15,7 @@
             POPULÄRA KYLSKÅP
         </div>
         {{-- Products Grid --}}
-        <div class="grid grid-cols-3 gap-x-12 gap-y-16 mt-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-14">
 
             {{-- Product Card --}}
             @for ($i = 0; $i < 3; $i++) <x-product-card>
@@ -24,10 +24,10 @@
         </div>
 
         <div class="flex justify-center mt-14">
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-350"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100"></a>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-350 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
         </div>
 
     </div>
@@ -38,7 +38,7 @@
             VI REKOMMENDERAR
         </div>
         {{-- Products Grid --}}
-        <div class="grid grid-cols-3 gap-x-12 gap-y-16 mt-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-14">
 
             {{-- Product Card --}}
             @for ($i = 0; $i < 3; $i++) <x-product-card>
@@ -47,10 +47,10 @@
         </div>
 
         <div class="flex justify-center mt-14">
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-350"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100"></a>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-350 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
         </div>
 
     </div>
@@ -61,7 +61,7 @@
             BRA ATT VETA NÄR DU SKA KÖPA KYLSKÅP
         </div>
 
-        <div class="grid grid-cols-3 pt-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-14">
             <div class="pr-10">
                 <p class="text-base font-bold">Vilken energiklass ska jag välja?</p>
                 <div>
@@ -120,10 +120,10 @@
         </div>
 
         <div class="flex justify-center mt-14">
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-350"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200"></a>
-            <a href="javascript:void(0)" class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200"></a>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-350 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200 cursor-pointer"></div>
+            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200 cursor-pointer"></div>
         </div>
     </div>
 </x-app-layout>
