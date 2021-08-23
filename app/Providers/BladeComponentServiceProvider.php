@@ -34,6 +34,7 @@ class BladeComponentServiceProvider extends ServiceProvider
 
 
 
+        Blade::component('front.components.rangeSlider', 'range-slider');
         Blade::component('front.components.productCard', 'product-card');
     }
 }
