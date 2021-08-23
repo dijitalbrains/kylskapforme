@@ -19,8 +19,12 @@
         @apply cursor-pointer;
     }
 
-    input[type='radio'] {
+    input[type="radio"] {
         @apply checked:bg-black focus:bg-black focus:border-transparent border-black focus:text-black focus:ring-1 focus:ring-black mr-2;
+    }
+
+    h1 {
+        @apply text-3xl mb-14 font-bold;
     }
 
     p {
