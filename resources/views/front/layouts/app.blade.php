@@ -140,12 +140,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">TYP AV KYLSKÅP</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -202,12 +198,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">PRIS</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2 text-xs">
@@ -223,12 +215,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">REA</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -257,12 +245,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">LAGERSTATUS</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -279,12 +263,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">STIL</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -329,12 +309,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">MÅTT</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
 
@@ -442,12 +418,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">FÄRG</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -520,12 +492,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">ANTAL PERSONER I HUSHÅLLET / VOLYM</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
