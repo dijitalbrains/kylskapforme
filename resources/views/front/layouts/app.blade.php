@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="/css/app.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    {{-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
+    <script src="{{ mix('js/app.js') }}" defer></script>
     <title>Kylskap For Me @yield('title')</title>
 </head>
 
@@ -18,8 +19,9 @@
 
         {{-- Header --}}
         <header>
-            <img src="{{asset('/images/logo.svg')}}"
-                class="p-2 sm:p-0 bg-white max-w-max w-2/3 sm:w-1/4 lg:w-1/6 relative top-0 sm:top-3 lg:top-0">
+            <a href="/" class="p-2 sm:p-0 bg-white max-w-max w-2/3 sm:w-1/4 lg:w-1/6 relative top-0 sm:top-3 lg:top-0">
+                <img src="{{asset('/images/logo.svg')}}">
+            </a>
 
             {{-- Search Bar --}}
             <div class="search-bar">
@@ -36,7 +38,8 @@
             {{-- Login/Register --}}
             <div class="flex items-center bg-white ml-auto mr-5 mt-2 lg:m-0">
                 <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
-                <a href="javascript:void(0)" class="ml-4 xl:ml-8 xl:mr-12 border-b-2 border-lime-350">
+                <a href="javascript:void(0)"
+                    class="ml-4 xl:ml-8 xl:mr-12 border-b-2 border-lime-350 pb-1 uppercase font-bold hover:border-black">
                     Logga in / Registrera Dig
                 </a>
             </div>
@@ -57,14 +60,14 @@
             </div>
 
             <div>
-                <a href="javascript:void(0)" class="border-lime-350">
+                <a href="javascript:void(0)" class="border-lime-350 filter-preset-link">
                     <span class="truncate">Fristående kylskåP</span>
                     <span class="filter-preset-count">250 st</span>
                 </a>
             </div>
 
             @for ($i = 1; $i <= 8; $i++) <div>
-                <a href="javascript:void(0)" class="border-white inline-flex filter-preset">
+                <a href="javascript:void(0)" class="border-white inline-flex filter-preset-link filter-preset-max-w">
                     <span class="truncate flex-1">Kombinerad kyl och frysa</span>
                     <span class="filter-preset-count">250 st</span>
                 </a>
@@ -81,22 +84,25 @@
                 <div class="font-bold mb-4">FORME</div>
 
                 <ul>
-                    <li><a href="javascript:void(0)" class="font-normal border-black text-lime-350">Om forme</a></li>
-                    <li><a href="javascript:void(0)" class="font-normal border-black">Press och annonsering</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal text-lime-350">Om forme</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal">Press och annonsering</a></li>
                 </ul>
             </div>
             <div>
                 <div class="font-bold mb-4">KONTAKT OCH HJÄLP</div>
 
                 <ul>
-                    <li><a href="javascript:void(0)" class="font-normal border-black">Kontakta oss</a></li>
-                    <li><a href="javascript:void(0)" class="font-normal border-black">FAQ</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal">Kontakta oss</a></li>
+                    <li><a href="javascript:void(0)" class="font-normal">FAQ</a></li>
                 </ul>
             </div>
             <div>
                 <div class="font-bold mb-4">INFORMATION</div>
             </div>
-            <img src="{{asset('/images/logo-white.svg')}}">
+
+            <a href="/">
+                <img src="{{asset('/images/logo-white.svg')}}">
+            </a>
         </div>
     </footer>
 
@@ -134,12 +140,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">TYP AV KYLSKÅP</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -196,60 +198,13 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">PRIS</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2 text-xs">
 
-                        <div class="flex flex-col items-center" x-data="rangeSlider(0, 100000, 0, 100000)">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="price_min" min="0"
-                                max="100000" x-model="min" class="px-3 py-2 rounded" step="100">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="price_max" min="0"
-                                max="100000" x-model="max" step="100">
-
-                            <div class="flex items-center relative bg-white w-full h-1.5 mt-4" x-ref="sliderEl"
-                                @mouseup.window="dragLeft = dragRight = false"
-                                @mousemove.window="handleThumbMouseMove($event)" style="user-select: none">
-                                <div class="absolute h-1.5 bg-black"
-                                    :style="`left: ${(min - rangeMin) * 100 / range}%; right: ${100 - (max - rangeMin) * 100 / range}%`">
-                                </div>
-
-                                <div class="w-6 h-6 -ml-0.5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragLeft = true" :style="`left: ${(min - rangeMin) * 100 / range}%`"
-                                    x-ref="minThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-
-                                <div class="w-6 h-6 -ml-5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragRight = true" :style="`left: ${(max - rangeMin) * 100 / range}%`"
-                                    x-ref="maxThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between w-full mt-6">
-                                <input type="number" min="0" max="100000" x-model="min"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                                <span class="leading-8 font-bold">&ndash;</span>
-                                <input type="number" min="0" max="100000" x-model="max"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                            </div>
-                        </div>
+                        <x-range-slider :range-min="0" :range-max="100000" :min="0" :max="100000"></x-range-slider>
 
                     </div>
                 </div>
@@ -260,12 +215,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">REA</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -294,12 +245,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">LAGERSTATUS</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -316,12 +263,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">STIL</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -366,12 +309,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">MÅTT</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
 
@@ -379,50 +318,8 @@
                     <div x-show="open" class="font-bold mt-4 text-coolGray-600">Höjd</div>
                     <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                        <div class="flex flex-col items-center mb-5" x-data="rangeSlider(0, 200, 0, 200)">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="height_min" min="0"
-                                max="200" x-model="min" class="px-3 py-2 rounded" step="1">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="height_max" min="0"
-                                max="200" x-model="max" step="1">
-
-                            <div class="flex items-center relative bg-white w-full h-1.5 mt-4" x-ref="sliderEl"
-                                @mouseup.window="dragLeft = dragRight = false"
-                                @mousemove.window="handleThumbMouseMove($event)" style="user-select: none">
-                                <div class="absolute h-1.5 bg-black"
-                                    :style="`left: ${(min - rangeMin) * 100 / range}%; right: ${100 - (max - rangeMin) * 100 / range}%`">
-                                </div>
-
-                                <div class="w-6 h-6 -ml-0.5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragLeft = true" :style="`left: ${(min - rangeMin) * 100 / range}%`"
-                                    x-ref="minThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-
-                                <div class="w-6 h-6 -ml-5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragRight = true" :style="`left: ${(max - rangeMin) * 100 / range}%`"
-                                    x-ref="maxThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between w-full mt-6">
-                                <input type="number" min="0" max="200" x-model="min"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                                <span class="leading-8 font-bold">&ndash;</span>
-                                <input type="number" min="0" max="200" x-model="max"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                            </div>
-                        </div>
+                        <x-range-slider :range-min="0" :range-max="200" :min="0" :max="200" class="mb-5">
+                        </x-range-slider>
 
                         <div class="space-y-2">
                             <label class="block">
@@ -445,50 +342,8 @@
                     <div x-show="open" class="font-bold mt-4 text-coolGray-600">Bredd</div>
                     <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                        <div class="flex flex-col items-center mb-5" x-data="rangeSlider(10, 110, 10, 110)">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="width_min" min="10"
-                                max="110" x-model="min" class="px-3 py-2 rounded" step="1">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="width_max" min="10"
-                                max="110" x-model="max" step="1">
-
-                            <div class="flex items-center relative bg-white w-full h-1.5 mt-4" x-ref="sliderEl"
-                                @mouseup.window="dragLeft = dragRight = false"
-                                @mousemove.window="handleThumbMouseMove($event)" style="user-select: none">
-                                <div class="absolute h-1.5 bg-black"
-                                    :style="`left: ${(min - rangeMin) * 100 / range}%; right: ${100 - (max - rangeMin) * 100 / range}%`">
-                                </div>
-
-                                <div class="w-6 h-6 -ml-0.5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragLeft = true" :style="`left: ${(min - rangeMin) * 100 / range}%`"
-                                    x-ref="minThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-
-                                <div class="w-6 h-6 -ml-5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragRight = true" :style="`left: ${(max - rangeMin) * 100 / range}%`"
-                                    x-ref="maxThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between w-full mt-6">
-                                <input type="number" min="10" max="110" x-model="min"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                                <span class="leading-8 font-bold">&ndash;</span>
-                                <input type="number" min="10" max="110" x-model="max"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                            </div>
-                        </div>
+                        <x-range-slider :range-min="10" :range-max="110" :min="10" :max="110" class="mb-5">
+                        </x-range-slider>
 
                         <div class="space-y-2">
                             <label class="block">
@@ -511,50 +366,8 @@
                     <div x-show="open" class="font-bold mt-4 text-coolGray-600">Djup</div>
                     <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                        <div class="flex flex-col items-center mb-5" x-data="rangeSlider(0, 70, 0, 70)">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="depth_min" min="0"
-                                max="70" x-model="min" class="px-3 py-2 rounded" step="1">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="depth_max" min="0"
-                                max="70" x-model="max" step="1">
-
-                            <div class="flex items-center relative bg-white w-full h-1.5 mt-4" x-ref="sliderEl"
-                                @mouseup.window="dragLeft = dragRight = false"
-                                @mousemove.window="handleThumbMouseMove($event)" style="user-select: none">
-                                <div class="absolute h-1.5 bg-black"
-                                    :style="`left: ${(min - rangeMin) * 100 / range}%; right: ${100 - (max - rangeMin) * 100 / range}%`">
-                                </div>
-
-                                <div class="w-6 h-6 -ml-0.5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragLeft = true" :style="`left: ${(min - rangeMin) * 100 / range}%`"
-                                    x-ref="minThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-
-                                <div class="w-6 h-6 -ml-5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragRight = true" :style="`left: ${(max - rangeMin) * 100 / range}%`"
-                                    x-ref="maxThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between w-full mt-6">
-                                <input type="number" min="0" max="70" x-model="min"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                                <span class="leading-8 font-bold">&ndash;</span>
-                                <input type="number" min="0" max="70" x-model="max"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                            </div>
-                        </div>
+                        <x-range-slider :range-min="0" :range-max="780" :min="0" :max="70" class="mb-5">
+                        </x-range-slider>
 
                         <div class="space-y-2">
                             <label class="block">
@@ -577,50 +390,8 @@
                     <div x-show="open" class="font-bold mt-4 text-coolGray-600">Vikt</div>
                     <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                        <div class="flex flex-col items-center mb-5" x-data="rangeSlider(0, 200, 0, 200)">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="weight_min" min="0"
-                                max="200" x-model="min" class="px-3 py-2 rounded" step="1">
-                            <input class="absolute opacity-0 pointer-events-none" type="range" name="weight_max" min="0"
-                                max="200" x-model="max" step="1">
-
-                            <div class="flex items-center relative bg-white w-full h-1.5 mt-4" x-ref="sliderEl"
-                                @mouseup.window="dragLeft = dragRight = false"
-                                @mousemove.window="handleThumbMouseMove($event)" style="user-select: none">
-                                <div class="absolute h-1.5 bg-black"
-                                    :style="`left: ${(min - rangeMin) * 100 / range}%; right: ${100 - (max - rangeMin) * 100 / range}%`">
-                                </div>
-
-                                <div class="w-6 h-6 -ml-0.5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragLeft = true" :style="`left: ${(min - rangeMin) * 100 / range}%`"
-                                    x-ref="minThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-
-                                <div class="w-6 h-6 -ml-5 rounded-full bg-lime-350 absolute cursor-pointer"
-                                    @mousedown="dragRight = true" :style="`left: ${(max - rangeMin) * 100 / range}%`"
-                                    x-ref="maxThumb">
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="h-3 w-3 ml-1.5 mt-1.5 transform rotate-90" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 8h16M4 16h16" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between w-full mt-6">
-                                <input type="number" min="0" max="200" x-model="min"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                                <span class="leading-8 font-bold">&ndash;</span>
-                                <input type="number" min="0" max="200" x-model="max"
-                                    class="px-3 py-2 rounded w-36 font-bold">
-                            </div>
-                        </div>
+                        <x-range-slider :range-min="0" :range-max="200" :min="0" :max="200" class="mb-5">
+                        </x-range-slider>
 
                         <div class="space-y-2">
                             <label class="block">
@@ -647,12 +418,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">FÄRG</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -725,12 +492,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">ANTAL PERSONER I HUSHÅLLET / VOLYM</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <svg class="w-5 h-5 transition-transform transform -mr-1" :class="{ 'rotate-180': open }"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -777,7 +540,7 @@
 
                     const sliderRect = this.$refs.sliderEl.getBoundingClientRect();
 
-                    let r = (e.clientX - sliderRect.left) / sliderRect.width;
+                    let r = ((e.type == 'touchmove' ? e.touches[0].clientX : e.clientX) - sliderRect.left) / sliderRect.width;
                     r = Math.max(0, Math.min(r, 1));
                     const value = Math.floor(r * this.range + this.rangeMin);
 

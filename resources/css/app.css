@@ -11,10 +11,6 @@
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
-    a {
-        @apply uppercase font-bold pb-1 border-b-2 hover:border-black;
-    }
-
     label {
         @apply cursor-pointer;
     }
@@ -73,7 +69,11 @@
         @apply bg-black rounded-full text-white p-1 pl-3 m-0 mt-4 sm:mt-0 sm:mx-5 xl:mr-40 w-full sm:w-2/3 lg:w-1/2 xl:w-2/5 flex items-center font-light text-xs;
     }
 
-    .filter-preset {
+    .filter-preset-link {
+        @apply uppercase font-bold pb-1 border-b-2 hover:border-black;
+    }
+
+    .filter-preset-max-w {
         max-width: calc(100% - 5px);
     }
 
