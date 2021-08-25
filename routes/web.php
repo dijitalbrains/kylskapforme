@@ -24,3 +24,7 @@ Route::get('/product', function () {
 Route::get('/info', function () {
     return view('front.info.index');
 });
+
+Route::get('/search', function () {
+    return view('front.search.index');
+});

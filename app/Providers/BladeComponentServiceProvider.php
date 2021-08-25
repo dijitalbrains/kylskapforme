@@ -28,7 +28,7 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('front.layouts.app', 'app-layout');
 
         // SVG Icons
-        Blade::component('front.components.svg.chevronDown', 'svg-chevron-down');
+        Blade::component('front.components.svg.chevron', 'svg-chevron');
         Blade::component('front.components.svg.searchCircle', 'svg-search-circle');
         Blade::component('front.components.svg.heart', 'svg-heart');
 

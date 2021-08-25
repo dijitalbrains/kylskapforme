@@ -55,7 +55,7 @@
                     class="bg-black rounded-full text-white pl-6 pr-5 py-1.5 xl:py-2 uppercase font-medium hover:shadow-lg"
                     @click="isSidebarOpen = true">
                     <span class="relative top-px">Alla filter</span>
-                    <x-svg-chevron-down class="h-6 w-6 inline-block ml-3 text-lime-350"></x-svg-chevron-down>
+                    <x-svg-chevron direction="down" class="h-6 w-6 inline-block ml-3 text-lime-350"></x-svg-chevron>
                 </button>
             </div>
 
@@ -140,8 +140,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">TYP AV KYLSKÅP</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -198,8 +198,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">PRIS</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2 text-xs">
@@ -215,8 +215,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">REA</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -245,8 +245,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">LAGERSTATUS</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -263,8 +263,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">STIL</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -309,8 +309,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">MÅTT</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
 
@@ -418,8 +418,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">FÄRG</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
@@ -492,8 +492,8 @@
                         :aria-expanded="open ? 'true' : 'false'">
                         <span class="font-bold">ANTAL PERSONER I HUSHÅLLET / VOLYM</span>
                         <span class="ml-auto" aria-hidden="true">
-                            <x-svg-chevron-down class="w-5 h-5 transition-transform transform -mr-1"
-                                ::class="{ 'rotate-180': open }"></x-svg-chevron-down>
+                            <x-svg-chevron direction="down" class="w-5 h-5 transition-transform transform -mr-1"
+                                ::class="{ 'rotate-180': open }"></x-svg-chevron>
                         </span>
                     </div>
                     <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
