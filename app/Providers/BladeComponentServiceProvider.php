@@ -31,6 +31,8 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('front.components.svg.chevron', 'svg-chevron');
         Blade::component('front.components.svg.searchCircle', 'svg-search-circle');
         Blade::component('front.components.svg.heart', 'svg-heart');
+        Blade::component('front.components.svg.heartOutline', 'svg-heart-outline');
+        Blade::component('front.components.svg.share', 'svg-share');
 
 
 
