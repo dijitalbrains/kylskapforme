@@ -94,6 +94,10 @@
         @apply bg-section bg-contain bg-no-repeat bg-lime-350 text-2xl font-bold uppercase text-center py-2;
     }
 
+    .swiper-pagination-bullet {
+        @apply p-1.5 bg-lime-350 !important;
+    }
+
     /* sm: 640px */
     @media (min-width: 640px) {
         header {
@@ -108,3 +112,5 @@
         }
     }
 }
+
+@import "../../node_modules/swiper/swiper-bundle.css";

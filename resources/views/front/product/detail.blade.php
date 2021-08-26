@@ -2,14 +2,26 @@
     <div class="grid grid-cols-3 gap-6">
         <div class="col-span-2">
             <div class="bg-trueGray-250 p-5">
-                {{-- Image --}}
-                <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
-
-                <div class="flex justify-center">
-                    <div class="rounded-full p-1.5 mx-1  hover:border-0 bg-lime-350 cursor-pointer"></div>
-                    <div class="rounded-full p-1.5 mx-1  hover:border-0 bg-lime-100 cursor-pointer"></div>
-                    <div class="rounded-full p-1.5 mx-1  hover:border-0 bg-lime-100 cursor-pointer"></div>
-                    <div class="rounded-full p-1.5 mx-1  hover:border-0 bg-lime-100 cursor-pointer"></div>
+                <!-- Slider main container -->
+                <div class="swiper my-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
 
@@ -26,32 +38,33 @@
             </div>
             <div class="grid grid-cols-2 gap-4 mt-4">
                 <div class="ml-5">
-                    <div class="text-lg font-bold text-lime-350">ElGiganten</div>
-                    <div class="text-lg font-bold">MEDIAMARKT</div>
-                    <div class="text-lg font-bold">ElON</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
-                    <div class="text-lg font-bold">ElGiganten</div>
+                    <div class="text-lg font-medium text-lime-350">ElGiganten</div>
+                    <div class="text-lg font-medium">MEDIAMARKT</div>
+                    <div class="text-lg font-medium">ElON</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
+                    <div class="text-lg font-medium">ElGiganten</div>
                 </div>
                 <div>
-                    <div class="text-lg font-bold text-lime-350">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
-                    <div class="text-lg font-bold">7 395 kr</div>
+                    <div class="text-lg font-medium text-lime-350">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
+                    <div class="text-lg font-medium">7 395 kr</div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <h1 class="my-4 leading-5">
         Whirlpool<br>
