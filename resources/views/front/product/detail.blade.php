@@ -59,7 +59,7 @@
     </h1>
 
     <div class="border-t-2 border-b-2 border-lime-350 py-2 my-5">
-        <div class="ml-1">
+        <div class="ml-1 font-light">
             Färg: Rostfritt<br>
             Kylkapacitet: 346 liter<br>
             Höjd: 1860 cm<br>
@@ -70,34 +70,36 @@
     <div class="grid grid-cols-3 gap-4">
         <div>
             <div class="font-bold">PRODUKTEGENSKAPER</div>
-            Produktgrupp Kylskåp<br>
-            Produktnamn SW8 AM2Y XR 2<br>
-            EAN-kod 8003437614132<br>
-            Konstruktion freestanding<br>
-            Installationstyp Fristående<br>
-            Typ av reglage Elektronisk<br>
-            Typ av kontrollinställning och signalenheter External alarm<br>
-            Färg Rostfri<br>
-            Anslutningseffekt 100<br>
-            Ström 0,7<br>
-            Spänning 220-240<br>
-            Frekvens 50<br>
-            Nätkabelns längd 245<br>
-            Elkontakt Schuko<br>
-            Nettovolym, totalt 364<br>
-            Stjärnmärkning N/A<br>
-            Ange antalet fristående kylsystem 1<br>
-            Höjd 1875<br>
-            Bredd 595<br>
-            Djup 630<br>
-            Djup med dörren öppen i 90° -<br>
-            Max höjdjustering 0<br>
-            Nettovikt 62<br>
-            Gångjärn Höger omhängbar
+            <p class="font-light">
+                Produktgrupp Kylskåp<br>
+                Produktnamn SW8 AM2Y XR 2<br>
+                EAN-kod 8003437614132<br>
+                Konstruktion freestanding<br>
+                Installationstyp Fristående<br>
+                Typ av reglage Elektronisk<br>
+                Typ av kontrollinställning och signalenheter External alarm<br>
+                Färg Rostfri<br>
+                Anslutningseffekt 100<br>
+                Ström 0,7<br>
+                Spänning 220-240<br>
+                Frekvens 50<br>
+                Nätkabelns längd 245<br>
+                Elkontakt Schuko<br>
+                Nettovolym, totalt 364<br>
+                Stjärnmärkning N/A<br>
+                Ange antalet fristående kylsystem 1<br>
+                Höjd 1875<br>
+                Bredd 595<br>
+                Djup 630<br>
+                Djup med dörren öppen i 90° -<br>
+                Max höjdjustering 0<br>
+                Nettovikt 62<br>
+                Gångjärn Höger omhängbar
+            </p>
         </div>
         <div>
             <div class="font-bold">TEKNISKA DATA</div>
-            <p>
+            <p class="font-light">
                 Reglerbar temperatur Ja<br>
                 Varningssignal / driftfel Ljus + ljud<br>
                 Avfrostning kyl Automatisk<br>
@@ -111,7 +113,7 @@
                 Kyltermometer Analog
             </p>
             <div class="font-bold">ENERGI & PRESTANDA</div>
-            <p>
+            <p class="font-light">
                 Temperaturstegringstid 0<br>
                 Klimatklass SN-T<br>
                 Buller 38<br>
@@ -123,7 +125,7 @@
         <div class="grid">
             <div>
                 <div class="font-bold">Specifikationer</div>
-                <p>
+                <p class="font-light">
                     Förbrukning<br>
                     Energiklass<br>
                     E<br>
@@ -139,7 +141,7 @@
             <div class="grid grid-cols-2 gap-3">
                 <div>
                     <div class="font-bold">Allmänna egenskaper</div>
-                    <p>
+                    <p class="font-light">
                         Färg/Material<br>
                         Kylkapacitet<br>
                         Ljudnivåklass<br>
@@ -152,20 +154,20 @@
                     </p>
 
                     <div class="font-bold">Levereras med utrustning/tillbehör</div>
-                    <p>
+                    <p class="font-light">
                         Elanslutning Jordad<br>
                         Sladd ingår
                     </p>
 
                     <div class="font-bold">Mått och vikt</div>
-                    <p>
+                    <p class="font-light">
                         Höjd<br>
                         Bredd<br>
                         Djup
                     </p>
                 </div>
                 <div>
-                    <p>
+                    <p class="font-light">
                         <br>Rostfritt stål<br>
                         364 liter<br>
                         C<br>
@@ -176,12 +178,12 @@
                         Ja<br>
                         Högerhängd
                     </p>
-                    <p>
+                    <p class="font-light">
                         <br>Jordad stickkontakt
                         - normalstik<br>
                         Ja
                     </p>
-                    <p>
+                    <p class="font-light">
                         <br>1875 mm<br>
                         595 mm<br>
                         630 mm

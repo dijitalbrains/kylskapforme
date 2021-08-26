@@ -1,11 +1,4 @@
 <x-app-layout>
-    <nav class="my-5">
-        <ul class="flex text-coolGray-350">
-            <li class="cursor-pointer">Startsida</li>
-            <li><span class="mx-2">/</span></li>
-            <li class="cursor-pointer">Fristående kylskåp</li>
-        </ul>
-    </nav>
 
     <h1>FRISTÅENDE KYLSKÅP</h1>
 

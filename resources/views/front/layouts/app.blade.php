@@ -75,6 +75,11 @@
         @endfor
     </div>
 
+    {{-- Breadcrumb --}}
+    @if ( Request::path() !== '/')
+    <x-Breadcrumb class="my-10"></x-Breadcrumb>
+    @endif
+
     {{$slot}}
 
     {{-- Footer --}}
