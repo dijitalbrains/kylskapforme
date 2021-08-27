@@ -2,11 +2,9 @@
     <div class="grid grid-cols-3 gap-6">
         <div class="col-span-2">
             <div class="bg-trueGray-250 p-5">
-                <!-- Slider main container -->
-                <div class="swiper my-swiper">
-                    <!-- Additional required wrapper -->
+                {{-- Image Slider (Swiper) --}}
+                <div class="swiper image-swiper">
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
                         <div class="swiper-slide">
                             <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
                         </div>
@@ -20,8 +18,9 @@
                             <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
                         </div>
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div class="image-swiper-pagination swiper-pagination bullet-lime"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
 
@@ -211,20 +210,17 @@
         <div class="section-header-lime">
             LIKNANDE KYLSKÅP
         </div>
-        {{-- Products Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-14">
 
-            {{-- Product Card --}}
-            @for ($i = 0; $i < 3; $i++) <x-product-card>
-                </x-product-card>
+        {{-- Product Card Slider (Swiper) --}}
+        <div class="swiper product-swiper my-14">
+            <div class="swiper-wrapper mb-14">
+                @for ($i = 0; $i < 9; $i++)
+                <div class="swiper-slide">
+                    <x-product-card></x-product-card>
+                </div>
                 @endfor
-        </div>
-
-        <div class="flex justify-center mt-14">
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-350 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
+            </div>
+            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
         </div>
 
     </div>

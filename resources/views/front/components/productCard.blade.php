@@ -29,8 +29,8 @@
     </div>
 
     {{-- Button --}}
-    <div class="text-center mt-7">
-        <a href="product" class="btn-round-black">
+    <div class="text-center">
+        <a href="product" class="btn-round-black inline-block">
             LÄS MER
         </a>
     </div>

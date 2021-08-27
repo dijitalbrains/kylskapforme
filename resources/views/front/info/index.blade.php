@@ -41,20 +41,18 @@
         <div class="section-header-lime">
             EXEMPEL PÅ FRISTÅENDE KYLSKÅP
         </div>
-        {{-- Products Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-14">
 
-            {{-- Product Card --}}
-            @for ($i = 0; $i < 3; $i++) <x-product-card>
-                </x-product-card>
+        {{-- Product Card Slider (Swiper) --}}
+        <div class="swiper product-swiper my-14">
+            <div class="swiper-wrapper mb-14">
+                @for ($i = 0; $i < 9; $i++)
+                <div class="swiper-slide">
+                    <x-product-card></x-product-card>
+                </div>
                 @endfor
+            </div>
+            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
         </div>
 
-        <div class="flex justify-center mt-14">
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-350 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-lime-100 cursor-pointer"></div>
-        </div>
     </div>
 </x-app-layout>

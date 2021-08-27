@@ -95,7 +95,20 @@
     }
 
     .swiper-pagination-bullet {
-        @apply p-1.5 bg-lime-350 !important;
+        @apply p-2 mx-2 !important;
+    }
+
+    .bullet-lime .swiper-pagination-bullet {
+        @apply bg-lime-350 !important;
+    }
+
+    .bullet-gray .swiper-pagination-bullet {
+        @apply bg-coolGray-350 !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        @apply text-lime-350 !important;
     }
 
     .pagination-link {
@@ -120,5 +133,3 @@
         }
     }
 }
-
-@import "../../node_modules/swiper/swiper-bundle.css";
