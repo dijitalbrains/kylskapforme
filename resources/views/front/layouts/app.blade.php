@@ -60,14 +60,14 @@
             </div>
 
             <div>
-                <a href="javascript:void(0)" class="border-lime-350 filter-preset-link">
+                <a href="{{url('search')}}" class="border-lime-350 filter-preset-link">
                     <span class="truncate">Fristående kylskåP</span>
                     <span class="filter-preset-count">250 st</span>
                 </a>
             </div>
 
             @for ($i = 1; $i <= 8; $i++) <div>
-                <a href="javascript:void(0)" class="border-white inline-flex filter-preset-link filter-preset-max-w">
+                <a href="{{url('search')}}" class="border-white inline-flex filter-preset-link filter-preset-max-w">
                     <span class="truncate flex-1">Kombinerad kyl och frysa</span>
                     <span class="filter-preset-count">250 st</span>
                 </a>
