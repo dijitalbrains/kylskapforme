@@ -98,6 +98,14 @@
         @apply p-1.5 bg-lime-350 !important;
     }
 
+    .pagination-link {
+        @apply text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-black hover:bg-lime-350;
+    }
+
+    .pagination-link-active {
+        @apply bg-lime-350 text-black;
+    }
+
     /* sm: 640px */
     @media (min-width: 640px) {
         header {

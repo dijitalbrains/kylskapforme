@@ -77,7 +77,7 @@
 
     {{-- Breadcrumb --}}
     @if ( Request::path() !== '/')
-    <x-Breadcrumb class="my-10"></x-Breadcrumb>
+    <x-breadcrumb class="my-10"></x-breadcrumb>
     @endif
 
     {{$slot}}
@@ -89,16 +89,16 @@
                 <div class="font-bold mb-4">FORME</div>
 
                 <ul>
-                    <li><a href="javascript:void(0)" class="font-normal text-lime-350">Om forme</a></li>
-                    <li><a href="javascript:void(0)" class="font-normal">Press och annonsering</a></li>
+                    <li><a href="info" class="font-normal text-lime-350">Om forme</a></li>
+                    <li><a href="info" class="font-normal">Press och annonsering</a></li>
                 </ul>
             </div>
             <div>
                 <div class="font-bold mb-4">KONTAKT OCH HJÄLP</div>
 
                 <ul>
-                    <li><a href="javascript:void(0)" class="font-normal">Kontakta oss</a></li>
-                    <li><a href="javascript:void(0)" class="font-normal">FAQ</a></li>
+                    <li><a href="info" class="font-normal">Kontakta oss</a></li>
+                    <li><a href="info" class="font-normal">FAQ</a></li>
                 </ul>
             </div>
             <div>

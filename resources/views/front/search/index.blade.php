@@ -9,30 +9,21 @@
 
     </div>
 
-    <nav class="my-10">
+    <nav class="my-20">
         <ul class="flex justify-center">
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-white">
+            <li>
+                <a href="javascript:void(0)" class="pagination-link">
                     <x-svg-chevron direction="left" class="w-4 h-4"></x-svg-chevron>
                 </a>
             </li>
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-white">1</a>
-            </li>
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-white">2</a>
-            </li>
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-white">3</a>
-            </li>
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-white">4</a>
-            </li>
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-white">5</a>
-            </li>
-            <li><a href="javascript:void(0)"
-                    class="text-xs font-medium flex w-8 h-8 mx-1 rounded-full items-center justify-center leading-tight bg-black text-lime-350 hover:text-white">
+
+            <li><a href="javascript:void(0)" class="pagination-link">1</a></li>
+            <li><a href="javascript:void(0)" class="pagination-link">2</a></li>
+            <li><a href="javascript:void(0)" class="pagination-link">3</a></li>
+            <li><a href="javascript:void(0)" class="pagination-link pagination-link-active">4</a></li>
+            <li><a href="javascript:void(0)" class="pagination-link">5</a></li>
+
+            <li><a href="javascript:void(0)" class="pagination-link">
                     <x-svg-chevron direction="right" class="w-4 h-4"></x-svg-chevron>
                 </a>
             </li>

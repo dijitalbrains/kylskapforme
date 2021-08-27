@@ -29,9 +29,9 @@
     </div>
 
     {{-- Button --}}
-    <div class="text-center">
-        <button class="btn-round-black">
+    <div class="text-center mt-7">
+        <a href="product" class="btn-round-black">
             LÄS MER
-        </button>
+        </a>
     </div>
 </div>
