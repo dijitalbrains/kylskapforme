@@ -13,7 +13,7 @@
         <div class="text-base font-bold uppercase mb-1">Whirlpool</div>
         <div class="font-bold uppercase">
             SW8 AM2Y XR 2
-            <span class="lowercase">Fristående kylskåp</span>
+            <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
         </div>
         <div class="font-light my-4">
             Färg: Rostfritt<br>
