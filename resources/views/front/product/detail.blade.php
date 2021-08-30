@@ -31,61 +31,16 @@
             </div>
 
         </div>
-        <div>
-            <div class="border-t-2 border-b-2 border-lime-350 py-2 text-lg font-bold">
+        <div class="text-base font-bold uppercase">
+            <div class="border-t-2 border-b-2 border-lime-350 py-1 text-lg">
                 <span class="ml-4">KÖP HOS:</span>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold text-lime-350 uppercase">
-                    ElGiganten
-                </div>
-                <div class="text-base font-bold text-lime-350 uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">MEDIAMARKT</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElON</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
-                <div class="text-base font-bold uppercase">ElGiganten</div>
-                <div class="text-base font-bold uppercase">7 395 kr</div>
+            <div class="grid grid-cols-2 gap-4 gap-y-2 ml-7 mt-7">
+                @for ($i=0; $i<10; $i++)
+                    <div class="{{$i==0 ? 'text-lime-350' : ''}}">MEDIAMARKT</div>
+                    <div class="{{$i==0 ? 'text-lime-350' : ''}}">7 395 kr</div>
+                @endfor
             </div>
         </div>
     </div>
