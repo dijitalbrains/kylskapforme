@@ -18,14 +18,13 @@
         {{-- Product Card Slider (Swiper) --}}
         <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
-                @for ($i = 0; $i < 9; $i++)
-                <div class="swiper-slide">
+                @for ($i = 0; $i < 9; $i++) <div class="swiper-slide">
                     <x-product-card></x-product-card>
-                </div>
-                @endfor
             </div>
-            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+            @endfor
         </div>
+        <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+    </div>
 
     </div>
 
@@ -38,14 +37,13 @@
         {{-- Product Card Slider (Swiper) --}}
         <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
-                @for ($i = 0; $i < 9; $i++)
-                <div class="swiper-slide">
+                @for ($i = 0; $i < 9; $i++) <div class="swiper-slide">
                     <x-product-card></x-product-card>
-                </div>
-                @endfor
             </div>
-            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+            @endfor
         </div>
+        <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+    </div>
 
     </div>
 
@@ -66,17 +64,20 @@
                             energieffektiv modell.</p>
 
                         <span class="font-bold">Vilken energiklass ska jag välja? Här är en översikt.</span>
-                        <p>A+++ Den högsta effektivitetsklassen. Och det bästa valet om du vill minska dina energikostnader
+                        <p>A+++ Den högsta effektivitetsklassen. Och det bästa valet om du vill minska dina
+                            energikostnader
                             och ditt koldioxidavtryck.</p>
 
-                        <p>A++ Vitvaror i klass A++ är inte längre de mest energieffektiva på marknaden. Investera i en kyl
+                        <p>A++ Vitvaror i klass A++ är inte längre de mest energieffektiva på marknaden. Investera i en
+                            kyl
                             i klass A+++, det lönar sig i längden.</p>
 
                         <p>A+ Kylar med energieffektivitetsklass A+ kan förbruka upp till dubbelt så mycket el som en i
                             klass A+++.</p>
 
                         <p>Kategorin kylskåp, frysskåp och kyl/frysar kommer få en ny energideklaration 1 mars 2021. Då
-                            försvinner alla "plus-tecken" efter bokstaven som beskriver energieffektivitetsklass och skalan
+                            försvinner alla "plus-tecken" efter bokstaven som beskriver energieffektivitetsklass och
+                            skalan
                             görs om internationellt.</p>
                     </div>
                 </div>
@@ -91,14 +92,16 @@
                         Inbyggd: Idealiskt om du vill skapa en ren, sömlös look, integrerad med samma luckor som övriga
                         köket.</p>
 
-                    <p>Oavsett vilken du väljer hittar du den rätta stilen och modellen för dina behov och preferenser hos
+                    <p>Oavsett vilken du väljer hittar du den rätta stilen och modellen för dina behov och preferenser
+                        hos
                         Bosch. Vi har många sorters kylskåp att välja mellan.</p>
                 </div>
 
                 <div class="swiper-slide">
                     <p class="text-base font-bold">Vilken storlek passar i mitt kök?</p>
 
-                    <p>Du måste veta vilket mått (höjd och bredd och djup) på kyl som passar i ditt kök innan du väljer en
+                    <p>Du måste veta vilket mått (höjd och bredd och djup) på kyl som passar i ditt kök innan du väljer
+                        en
                         ny
                         kyl. Det gäller i synnerhet om kylen ska placeras i en nisch eller du ska byta ut ett gammalt
                         kylskåp. Planerar du ett
@@ -107,7 +110,8 @@
                     <p>Tips från proffsen: Här kommer några allmänna riktlinjer när det gäller dimensioner:</p>
 
                     <p>En standardkyl är 60 cm bred.<br>
-                        En XXL-modell är 70 cm eller bredare. Kompletterar du ett 70 cm kylskåp med ett köksskåp på 50 cm
+                        En XXL-modell är 70 cm eller bredare. Kompletterar du ett 70 cm kylskåp med ett köksskåp på 50
+                        cm
                         kan du
                         ersätta ett gammalt kylskåp och frysskåp med en total bredd på 120 cm med en sådan lösning om du
                         exvis ska byta ut
@@ -118,26 +122,5 @@
             </div>
             <div class="product-swiper-pagination swiper-pagination bullet-gray"></div>
         </div>
-
-        {{-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-14">
-            <div class="pr-10">
-
-            </div>
-
-            <div class="border-l border-r px-10 pb-20">
-
-            </div>
-
-            <div class="pl-10">
-
-            </div>
-        </div>
-
-        <div class="flex justify-center mt-14">
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-350 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200 cursor-pointer"></div>
-            <div class="rounded-full p-2 mx-2 hover:border-0 bg-coolGray-200 cursor-pointer"></div>
-        </div> --}}
     </div>
 </x-app-layout>

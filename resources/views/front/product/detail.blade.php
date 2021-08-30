@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="col-span-2">
             <div class="bg-trueGray-250 p-5">
                 {{-- Image Slider (Swiper) --}}
@@ -35,7 +35,7 @@
             <div class="border-t-2 border-b-2 border-lime-350 py-2 text-lg font-bold">
                 <span class="ml-4">KÖP HOS:</span>
             </div>
-            <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="grid grid-cols-2 gap-4 my-4">
                 <div class="ml-5">
                     <div class="text-lg font-medium text-lime-350">ElGiganten</div>
                     <div class="text-lg font-medium">MEDIAMARKT</div>
@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
             <div class="font-bold">PRODUKTEGENSKAPER</div>
             <p class="font-light">
@@ -134,72 +134,97 @@
                 Min omgivande temperatur 0
             </p>
         </div>
-        <div class="grid">
-            <div>
-                <div class="font-bold">Specifikationer</div>
-                <p class="font-light">
-                    Förbrukning<br>
-                    Energiklass<br>
-                    E<br>
-                    Energiklass<br>
-                    A++<br>
-                    Årlig energiförbrukning<br>
-                    114 kWh/år<br>
-                    Fungerar i temperatur (°C)<br>
-                    10-43°C (SN-T)
-                </p>
+        <div class="grid grid-cols-1">
+
+            <div class="font-bold">Specifikationer</div>
+            <p class="font-light">
+                Förbrukning<br>
+                Energiklass<br>
+                E<br>
+                Energiklass<br>
+                A++<br>
+                Årlig energiförbrukning<br>
+                114 kWh/år<br>
+                Fungerar i temperatur (°C)<br>
+                10-43°C (SN-T)
+            </p>
+
+            <div class="font-bold">Allmänna egenskaper</div>
+            <div class="mb-4 font-light">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Färg/Material</div>
+                    <div>Rostfritt stål</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Kylkapacitet</div>
+                    <div>364 liter</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Ljudnivåklass</div>
+                    <div>c</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Ljudnivå</div>
+                    <div>38 dB(A)</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Ventilerad kyl</div>
+                    <div>kyl Ja</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>LED belysning</div>
+                    <div>Ja</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Vattendispenser</div>
+                    <div>Nej</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Omhängbar dörr</div>
+                    <div>Ja</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Höger- eller vänsterhängd dörr</div>
+                    <div>Högerhängd</div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-3">
-                <div>
-                    <div class="font-bold">Allmänna egenskaper</div>
-                    <p class="font-light">
-                        Färg/Material<br>
-                        Kylkapacitet<br>
-                        Ljudnivåklass<br>
-                        Ljudnivå<br>
-                        Ventilerad kyl<br>
-                        LED belysning<br>
-                        Vattendispenser<br>
-                        Omhängbar dörr<br>
-                        Höger- eller vänsterhängd dörr
-                    </p>
-
-                    <div class="font-bold">Levereras med utrustning/tillbehör</div>
-                    <p class="font-light">
-                        Elanslutning Jordad<br>
-                        Sladd ingår
-                    </p>
-
-                    <div class="font-bold">Mått och vikt</div>
-                    <p class="font-light">
-                        Höjd<br>
-                        Bredd<br>
-                        Djup
-                    </p>
+            <div class="font-bold">Levereras med utrustning/tillbehör</div>
+            <div class="mb-4 font-light">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Elanslutning Jordad</div>
+                    <div>Jordad stickkontakt - normalstik</div>
                 </div>
-                <div>
-                    <p class="font-light">
-                        <br>Rostfritt stål<br>
-                        364 liter<br>
-                        C<br>
-                        38 dB(A)<br>
-                        kyl Ja<br>
-                        Ja<br>
-                        Nej<br>
-                        Ja<br>
-                        Högerhängd
-                    </p>
-                    <p class="font-light">
-                        <br>Jordad stickkontakt
-                        - normalstik<br>
-                        Ja
-                    </p>
-                    <p class="font-light">
-                        <br>1875 mm<br>
-                        595 mm<br>
-                        630 mm
-                    </p>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Sladd ingår</div>
+                    <div>Ja</div>
+                </div>
+            </div>
+
+            <div class="font-bold">Mått och vikt</div>
+            <div class="mb-4 font-light">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Höjd</div>
+                    <div>1875 mm</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Bredd</div>
+                    <div>595 mm</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>Djup</div>
+                    <div>630 mm</div>
                 </div>
             </div>
         </div>
@@ -214,14 +239,13 @@
         {{-- Product Card Slider (Swiper) --}}
         <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
-                @for ($i = 0; $i < 9; $i++)
-                <div class="swiper-slide">
+                @for ($i = 0; $i < 9; $i++) <div class="swiper-slide">
                     <x-product-card></x-product-card>
-                </div>
-                @endfor
             </div>
-            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+            @endfor
         </div>
+        <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+    </div>
 
     </div>
 
