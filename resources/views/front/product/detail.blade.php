@@ -35,40 +35,67 @@
             <div class="border-t-2 border-b-2 border-lime-350 py-2 text-lg font-bold">
                 <span class="ml-4">KÖP HOS:</span>
             </div>
-            <div class="grid grid-cols-2 gap-4 my-4">
-                <div class="ml-5">
-                    <div class="text-lg font-medium text-lime-350">ElGiganten</div>
-                    <div class="text-lg font-medium">MEDIAMARKT</div>
-                    <div class="text-lg font-medium">ElON</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
-                    <div class="text-lg font-medium">ElGiganten</div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold text-lime-350 uppercase">
+                    ElGiganten
                 </div>
-                <div>
-                    <div class="text-lg font-medium text-lime-350">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                    <div class="text-lg font-medium">7 395 kr</div>
-                </div>
+                <div class="text-base font-bold text-lime-350 uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">MEDIAMARKT</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElON</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 ml-5 my-1.5">
+                <div class="text-base font-bold uppercase">ElGiganten</div>
+                <div class="text-base font-bold uppercase">7 395 kr</div>
             </div>
         </div>
     </div>
 
 
-    <h1 class="my-4 leading-5">
-        Whirlpool<br>
-        <span class="text-xs">SW8 AM2Y XR 2 Fristående kylskåp</span>
-    </h1>
+    <h1 class="mt-4 mb-2 leading-5">Whirlpool</h1>
+    <div class="font-bold uppercase">
+        SW8 AM2Y XR 2
+        <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
+    </div>
 
     <div class="border-t-2 border-b-2 border-lime-350 py-2 my-5">
         <div class="ml-1 font-light">
