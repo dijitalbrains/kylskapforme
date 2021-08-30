@@ -1,4 +1,3 @@
-// require('./bootstrap');
 import Alpine from "alpinejs";
 import Swiper, { Pagination, Navigation } from "swiper";
 
