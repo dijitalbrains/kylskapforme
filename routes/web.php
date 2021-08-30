@@ -25,6 +25,11 @@ Route::get('/info', function () {
     return view('front.info.index');
 });
 
+Route::get('/contact-us', function () {
+    return view('front.pages.contactUs');
+});
+
+
 Route::get('/search', function () {
     return view('front.search.index');
 });
