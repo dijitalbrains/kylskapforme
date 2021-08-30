@@ -32,6 +32,10 @@
         font-size: 13px;
     }
 
+    [x-cloak] {
+        @apply hidden;
+    }
+
     @font-face {
         font-family: Montserrat;
         src: url(/fonts/montserrat/Montserrat-Regular.otf);
@@ -62,7 +66,7 @@
     }
 
     footer {
-        @apply bg-footer bg-black px-12 py-16 bg-contain bg-no-repeat bg-left-top mt-20;
+        @apply bg-footer bg-black px-12 py-5 sm:py-8 lg:py-16 bg-contain bg-no-repeat bg-left-top mt-20;
     }
 
     .search-bar {
