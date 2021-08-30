@@ -6,16 +6,16 @@
                 <div class="swiper image-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto ">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator-default.png')}}" class="m-auto">
+                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto">
                         </div>
                     </div>
                     <div class="image-swiper-pagination swiper-pagination bullet-lime"></div>
@@ -35,21 +35,26 @@
             <div class="border-t-2 border-b-2 border-lime-350 py-1 text-lg">
                 <span class="ml-4">KÖP HOS:</span>
             </div>
-
             <div class="grid grid-cols-2 gap-4 gap-y-2 ml-7 mt-7">
-                @for ($i=0; $i<10; $i++)
-                    <div class="{{$i==0 ? 'text-lime-350' : ''}}">MEDIAMARKT</div>
-                    <div class="{{$i==0 ? 'text-lime-350' : ''}}">7 395 kr</div>
-                @endfor
+                @for ($i=0; $i<10; $i++) <div class="{{$i==0 ? 'text-lime-350' : ''}}">
+                    @if ($i==0)
+                    <x-svg-chevron direction="right" class="w-4 inline absolute -ml-5 mt-0.5"></x-svg-chevron>
+                    @endif
+                    MEDIAMARKT
             </div>
+            <div class="{{$i==0 ? 'text-lime-350' : ''}}">7 395 kr</div>
+            @endfor
         </div>
+    </div>
     </div>
 
 
-    <h1 class="mt-4 mb-2 leading-5">Whirlpool</h1>
-    <div class="font-bold uppercase">
-        SW8 AM2Y XR 2
-        <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
+    <div class="mt-10">
+        <h1 class="mt-4 mb-2 leading-5">Whirlpool</h1>
+        <div class="font-bold uppercase">
+            SW8 AM2Y XR 2
+            <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
+        </div>
     </div>
 
     <div class="border-t-2 border-b-2 border-lime-350 py-2 my-5">
@@ -62,6 +67,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
         <div>
             <div class="font-bold">PRODUKTEGENSKAPER</div>
             <p class="font-light">
@@ -91,6 +97,7 @@
                 Gångjärn Höger omhängbar
             </p>
         </div>
+
         <div>
             <div class="font-bold">TEKNISKA DATA</div>
             <p class="font-light">
@@ -116,8 +123,8 @@
                 Min omgivande temperatur 0
             </p>
         </div>
-        <div class="grid grid-cols-1">
 
+        <div>
             <div class="font-bold">Specifikationer</div>
             <p class="font-light">
                 Förbrukning<br>
@@ -132,82 +139,55 @@
             </p>
 
             <div class="font-bold">Allmänna egenskaper</div>
-            <div class="mb-4 font-light">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Färg/Material</div>
-                    <div>Rostfritt stål</div>
-                </div>
+            <div class="mb-4 font-light grid grid-cols-2">
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Kylkapacitet</div>
-                    <div>364 liter</div>
-                </div>
+                <div>Färg/Material</div>
+                <div>Rostfritt stål</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Ljudnivåklass</div>
-                    <div>c</div>
-                </div>
+                <div>Kylkapacitet</div>
+                <div>364 liter</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Ljudnivå</div>
-                    <div>38 dB(A)</div>
-                </div>
+                <div>Ljudnivåklass</div>
+                <div>c</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Ventilerad kyl</div>
-                    <div>kyl Ja</div>
-                </div>
+                <div>Ljudnivå</div>
+                <div>38 dB(A)</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>LED belysning</div>
-                    <div>Ja</div>
-                </div>
+                <div>Ventilerad kyl</div>
+                <div>kyl Ja</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Vattendispenser</div>
-                    <div>Nej</div>
-                </div>
+                <div>LED belysning</div>
+                <div>Ja</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Omhängbar dörr</div>
-                    <div>Ja</div>
-                </div>
+                <div>Vattendispenser</div>
+                <div>Nej</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Höger- eller vänsterhängd dörr</div>
-                    <div>Högerhängd</div>
-                </div>
+                <div>Omhängbar dörr</div>
+                <div>Ja</div>
+
+                <div>Höger- eller vänsterhängd dörr</div>
+                <div>Högerhängd</div>
             </div>
 
             <div class="font-bold">Levereras med utrustning/tillbehör</div>
-            <div class="mb-4 font-light">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Elanslutning Jordad</div>
-                    <div>Jordad stickkontakt - normalstik</div>
-                </div>
+            <div class="mb-4 font-light grid grid-cols-2">
+                <div>Elanslutning Jordad</div>
+                <div>Jordad stickkontakt - normalstik</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Sladd ingår</div>
-                    <div>Ja</div>
-                </div>
+                <div>Sladd ingår</div>
+                <div>Ja</div>
             </div>
 
             <div class="font-bold">Mått och vikt</div>
-            <div class="mb-4 font-light">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Höjd</div>
-                    <div>1875 mm</div>
-                </div>
+            <div class="mb-4 font-light grid grid-cols-2">
+                <div>Höjd</div>
+                <div>1875 mm</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Bredd</div>
-                    <div>595 mm</div>
-                </div>
+                <div>Bredd</div>
+                <div>595 mm</div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div>Djup</div>
-                    <div>630 mm</div>
-                </div>
+                <div>Djup</div>
+                <div>630 mm</div>
             </div>
         </div>
     </div>
