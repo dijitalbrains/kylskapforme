@@ -29,7 +29,8 @@ Route::get('/contact-us', function () {
     return view('front.pages.contactUs');
 });
 
-
 Route::get('/search', function () {
     return view('front.search.index');
 });
+
+require __DIR__.'/auth.php';
