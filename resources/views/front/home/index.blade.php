@@ -3,9 +3,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
 
         {{-- Product Card --}}
-        @for ($i = 0; $i < 9; $i++) <x-product-card>
-            </x-product-card>
-            @endfor
+        @foreach ($refrigerators as $refrigerator)
+            <x-product-card :refrigerator="$refrigerator"></x-product-card>
+        @endforeach
 
     </div>
 
@@ -18,10 +18,11 @@
         {{-- Product Card Slider (Swiper) --}}
         <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
-                @for ($i = 0; $i < 9; $i++) <div class="swiper-slide">
-                    <x-product-card></x-product-card>
-            </div>
-            @endfor
+                @foreach ($refrigerators as $refrigerator)
+                <div class="swiper-slide">
+                    <x-product-card :refrigerator="$refrigerator"></x-product-card>
+                </div>
+                @endforeach
         </div>
         <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
     </div>
@@ -37,10 +38,11 @@
         {{-- Product Card Slider (Swiper) --}}
         <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
-                @for ($i = 0; $i < 9; $i++) <div class="swiper-slide">
-                    <x-product-card></x-product-card>
-            </div>
-            @endfor
+                @foreach ($refrigerators as $refrigerator)
+                <div class="swiper-slide">
+                    <x-product-card :refrigerator="$refrigerator"></x-product-card>
+                </div>
+                @endforeach
         </div>
         <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
     </div>

@@ -6,19 +6,19 @@
     </a>
 
     {{-- Image --}}
-    <img src="{{asset('/images/refrigerator-default.png')}}" class="h-72 m-auto mb-4">
+    <img src="{{ $refrigerator->default_image }}" class="h-72 m-auto mb-4">
 
     {{-- Description --}}
     <div>
-        <div class="text-base font-bold uppercase mb-1">Whirlpool</div>
+        <div class="text-base font-bold uppercase mb-1">{{ $refrigerator->name }}</div>
         <div class="font-bold uppercase">
             SW8 AM2Y XR 2
             <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
         </div>
         <div class="font-light my-4">
-            Färg: Rostfritt<br>
+            Färg: {{ $refrigerator->color->name ?? '-' }}<br>
             Kylkapacitet: 346 liter<br>
-            Höjd: 1860 cm<br>
+            Höjd: {{ $refrigerator->height }}<br>
             Produktblad: ?
         </div>
     </div>

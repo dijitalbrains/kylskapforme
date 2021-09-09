@@ -2,11 +2,19 @@
 
 namespace App\Models;
 
+use App\Casts\UnitValue;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Refrigerator extends Model
 {
+    protected $casts = ['height' => UnitValue::class];
+
+    public function getDefaultImageAttribute()
+    {
+        return $this->images->where('type', 'standard')->first()->path;
+    }
+
     public function color()
     {
         return $this->belongsTo(Color::class);
