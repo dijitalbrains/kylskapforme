@@ -65,7 +65,7 @@ class Refrigerator extends Model
 
     public function stores()
     {
-        return $this->belongsToMany(Store::class, 'refrigerators_stores')->withPivot(['name', 'price', 'shipping_price', 'delivery_type', 'stock_status', 'stock_status_text', 'product_url']);
+        return $this->belongsToMany(Store::class, 'refrigerators_stores')->orderByPivot('price')->withPivot(['name', 'price', 'shipping_price', 'delivery_type', 'stock_status', 'stock_status_text', 'product_url']);
     }
 
     public function properties()

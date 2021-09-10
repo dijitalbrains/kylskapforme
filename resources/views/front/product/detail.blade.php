@@ -29,15 +29,15 @@
                 <span class="ml-4">KÖP HOS:</span>
             </div>
             <div class="grid grid-cols-2 gap-4 gap-y-2 ml-7 mt-7">
-                @for ($i = 0; $i < 10; $i++)
+                @foreach ($refrigerator->stores as $i => $store)
                     <div class="{{ $i == 0 ? 'text-lime-350' : '' }}">
                         @if ($i == 0)
                             <x-svg-chevron direction="right" class="w-4 inline absolute -ml-5 mt-0.5"></x-svg-chevron>
                         @endif
-                        MEDIAMARKT
+                        {{ $store->name }}
                     </div>
-                    <div class="{{ $i == 0 ? 'text-lime-350' : '' }}">7 395 kr</div>
-                @endfor
+                    <div class="{{ $i == 0 ? 'text-lime-350' : '' }}">{{ $store->pivot->price }} kr</div>
+                @endforeach
             </div>
         </div>
     </div>
