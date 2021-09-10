@@ -3,16 +3,39 @@
 namespace App\Models;
 
 use App\Casts\UnitValue;
+use App\Constants;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Refrigerator extends Model
 {
-    protected $casts = ['height' => UnitValue::class];
+    use HasFactory;
+
+    protected $casts = [
+        'height' => UnitValue::class,
+        'width' => UnitValue::class,
+        'displayed_volume' => UnitValue::class,
+    ];
+
+    public function getDisplayedVolumeAttribute()
+    {
+        $column = $this->category_id == Constants::FridgeFreezer ? 'fridge_volume' : 'volume';
+        return $this->castAttribute('displayed_volume', $this->{$column});
+    }
 
     public function getDefaultImageAttribute()
     {
         return $this->images->where('type', 'standard')->first()->path;
+    }
+
+    public function getColorNameAttribute()
+    {
+        return $this->color->name ?? '-';
+    }
+
+    public function getMinPriceAttribute()
+    {
+        return $this->stores->min('pivot.price');
     }
 
     public function color()
@@ -42,7 +65,7 @@ class Refrigerator extends Model
 
     public function stores()
     {
-        return $this->belongsToMany(Store::class, 'refrigerators_stores');
+        return $this->belongsToMany(Store::class, 'refrigerators_stores')->withPivot(['name', 'price', 'shipping_price', 'delivery_type', 'stock_status', 'stock_status_text', 'product_url']);
     }
 
     public function properties()

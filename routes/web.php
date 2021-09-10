@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RefrigeratorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/product/{id}', [RefrigeratorController::class, 'show']);
 
-Route::get('/product', function () {
-    return view('front.product.detail');
-});
 
 Route::get('/info', function () {
     return view('front.info.index');

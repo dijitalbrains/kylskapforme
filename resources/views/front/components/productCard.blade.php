@@ -16,8 +16,8 @@
             <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
         </div>
         <div class="font-light my-4">
-            Färg: {{ $refrigerator->color->name ?? '-' }}<br>
-            Kylkapacitet: 346 liter<br>
+            Färg: {{ $refrigerator->color_name }}<br>
+            Kylkapacitet: {{ $refrigerator->displayed_volume }}<br>
             Höjd: {{ $refrigerator->height }}<br>
             Produktblad: ?
         </div>
@@ -25,12 +25,12 @@
 
     {{-- Price --}}
     <div class="border-t-2 border-b-2 border-lime-350 py-2 text-center text-base">
-        Från <span class="font-bold ml-3">7 395 kr</span>
+        Från <span class="font-bold ml-3">{{ $refrigerator->min_price }} kr</span>
     </div>
 
     {{-- Button --}}
     <div class="text-center">
-        <a href="product" class="btn-round-black inline-block">
+        <a href="product/{{ $refrigerator->id }}" class="btn-round-black inline-block">
             LÄS MER
         </a>
     </div>

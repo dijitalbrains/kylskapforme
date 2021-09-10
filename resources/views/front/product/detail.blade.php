@@ -1,22 +1,15 @@
 <x-app-layout>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="col-span-2">
-            <div class="bg-trueGray-250 p-5">
+            <div class="p-5">
                 {{-- Image Slider (Swiper) --}}
                 <div class="swiper image-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto ">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{{asset('/images/refrigerator.png')}}" class="m-auto">
-                        </div>
+                        @foreach ($refrigerator->images as $image)
+                            <div class="swiper-slide">
+                                <img src="{{ $image->path }}" class="m-auto">
+                            </div>
+                        @endforeach
                     </div>
                     <div class="image-swiper-pagination swiper-pagination bullet-lime"></div>
                     <div class="swiper-button-prev"></div>
@@ -36,21 +29,22 @@
                 <span class="ml-4">KÖP HOS:</span>
             </div>
             <div class="grid grid-cols-2 gap-4 gap-y-2 ml-7 mt-7">
-                @for ($i=0; $i<10; $i++) <div class="{{$i==0 ? 'text-lime-350' : ''}}">
-                    @if ($i==0)
-                    <x-svg-chevron direction="right" class="w-4 inline absolute -ml-5 mt-0.5"></x-svg-chevron>
-                    @endif
-                    MEDIAMARKT
+                @for ($i = 0; $i < 10; $i++)
+                    <div class="{{ $i == 0 ? 'text-lime-350' : '' }}">
+                        @if ($i == 0)
+                            <x-svg-chevron direction="right" class="w-4 inline absolute -ml-5 mt-0.5"></x-svg-chevron>
+                        @endif
+                        MEDIAMARKT
+                    </div>
+                    <div class="{{ $i == 0 ? 'text-lime-350' : '' }}">7 395 kr</div>
+                @endfor
             </div>
-            <div class="{{$i==0 ? 'text-lime-350' : ''}}">7 395 kr</div>
-            @endfor
         </div>
-    </div>
     </div>
 
 
     <div class="mt-10">
-        <h1 class="mt-4 mb-2 leading-5">Whirlpool</h1>
+        <h1 class="mt-4 mb-2 leading-5">{{ $refrigerator->name }}</h1>
         <div class="font-bold uppercase">
             SW8 AM2Y XR 2
             <span class="capitalize">Fristående <span class="lowercase">kylskåp</span></span>
@@ -59,10 +53,10 @@
 
     <div class="border-t-2 border-b-2 border-lime-350 py-2 my-5">
         <div class="ml-1 font-light">
-            Färg: Rostfritt<br>
-            Kylkapacitet: 346 liter<br>
-            Höjd: 1860 cm<br>
-            Bredd: 59,5 cm
+            Färg: {{ $refrigerator->color_name }}<br>
+            Kylkapacitet: {{ $refrigerator->displayed_volume }}<br>
+            Höjd: {{ $refrigerator->height }}<br>
+            Bredd: {{ $refrigerator->width }}
         </div>
     </div>
 
@@ -201,13 +195,14 @@
         {{-- Product Card Slider (Swiper) --}}
         <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
-                @for ($i = 0; $i < 9; $i++) <div class="swiper-slide">
-                    <x-product-card></x-product-card>
+                @foreach ($similar_refrigerators as $refrigerator)
+                    <div class="swiper-slide">
+                        <x-product-card :refrigerator="$refrigerator"></x-product-card>
+                    </div>
+                @endforeach
             </div>
-            @endfor
+            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
         </div>
-        <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
-    </div>
 
     </div>
 

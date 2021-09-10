@@ -17,8 +17,12 @@ class UnitValue implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
-        $value = json_decode($value);
-        return $value->value . ' ' . $value->unit;
+        if ($value) {
+            $value = json_decode($value);
+            return $value->value . ' ' . $value->unit;
+        }
+
+        return $value;
     }
 
     /**
