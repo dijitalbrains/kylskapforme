@@ -74,7 +74,7 @@
     }
 
     .filter-preset-link {
-        @apply uppercase font-bold pb-1 border-b-2 hover:border-black;
+        @apply uppercase font-bold pb-1 border-b-2 hover:border-lime-350;
     }
 
     .filter-preset-max-w {
@@ -85,8 +85,13 @@
         @apply text-coolGray-350 ml-1 font-light lowercase;
     }
     .card-favourite {
-        @apply absolute top-0 right-0 border border-black hover:border-lime-350 rounded-full p-1;
+        @apply absolute top-0 right-0;
     }
+
+    .heart-outline {
+        @apply w-8 h-8 border border-black rounded-full hover:border-lime-350 hover:fill-current hover:text-lime-350 p-1;
+    }
+
     .btn-round-black {
         @apply rounded-full bg-black text-lime-350 font-medium px-10 py-3 mt-4 hover:text-white hover:shadow-lg;
     }
@@ -109,7 +114,10 @@
     .bullet-gray .swiper-pagination-bullet {
         @apply bg-coolGray-350 !important;
     }
-
+    .custom-button-prev,
+    .custom-button-next {
+        @apply top-1/4 !important;
+    }
     .swiper-button-prev,
     .swiper-button-next {
         @apply text-lime-350 !important;

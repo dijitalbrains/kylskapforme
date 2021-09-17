@@ -49,6 +49,7 @@ module.exports = {
             borderColor: ["checked"],
             borderWidth: ["hover"],
             opacity: ["disabled"],
+            fill: ["hover"],
         },
     },
     plugins: [

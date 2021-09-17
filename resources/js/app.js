@@ -38,3 +38,25 @@ new Swiper(".product-swiper", {
         clickable: true,
     },
 });
+
+new Swiper(".product-swiper-with-arrows", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 50,
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+    },
+});

@@ -2,11 +2,13 @@
 
     {{-- Favourite --}}
     <a href="javascript:void(0)" class="card-favourite">
-        <x-svg-heart class="h-5 w-5 fill-current text-lime-350 hover:border-lime-350"></x-svg-heart>
+        <x-svg-heart-outline class="heart-outline"></x-svg-heart-outline>
     </a>
 
     {{-- Image --}}
-    <img src="{{ $refrigerator->default_image }}" class="h-72 m-auto mb-4">
+    <a href="product/{{ $refrigerator->id }}">
+        <img src="{{ $refrigerator->default_image }}" class="h-72 m-auto mb-4">
+    </a>
 
     {{-- Description --}}
     <div>

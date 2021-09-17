@@ -5,7 +5,7 @@
                 <div class="font-bold mb-4">FORME</div>
 
                 <ul>
-                    <li><a href="info" class="font-normal text-lime-350">Om forme</a></li>
+                    <li><a href="info" class="font-normal hover:text-lime-350">Om forme</a></li>
                     <li><a href="info" class="font-normal hover:text-lime-350">Press och annonsering</a></li>
                 </ul>
             </div>

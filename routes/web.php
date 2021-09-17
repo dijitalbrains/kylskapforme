@@ -31,4 +31,10 @@ Route::get('/search', function () {
     return view('front.search.index');
 });
 
+Route::middleware('auth')->group(function () {
+    Route::get('/favourite', function () {
+        return view('front.favourite.index');
+    });
+});
+
 require __DIR__.'/auth.php';

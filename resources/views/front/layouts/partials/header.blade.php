@@ -17,7 +17,9 @@
 
     {{-- Login/Register --}}
     <div class="flex items-center bg-white ml-auto mr-5 mt-2 lg:m-0">
-        <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
+        <a href="{{ url('favourite') }}">
+            <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
+        </a>
         <a href="{{ route('login') }}"
             class="ml-4 xl:ml-8 xl:mr-12 border-b-2 border-lime-350 pb-1 uppercase font-bold hover:border-black">
             Logga in / Registrera Dig

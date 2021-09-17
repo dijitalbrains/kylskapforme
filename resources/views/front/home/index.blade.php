@@ -4,7 +4,7 @@
 
         {{-- Product Card --}}
         @foreach ($refrigerators as $refrigerator)
-            <x-product-card :refrigerator="$refrigerator"></x-product-card>
+        <x-product-card :refrigerator="$refrigerator"></x-product-card>
         @endforeach
 
     </div>
@@ -16,16 +16,18 @@
         </div>
 
         {{-- Product Card Slider (Swiper) --}}
-        <div class="swiper product-swiper my-14">
+        <div class="swiper product-swiper-with-arrows my-14">
             <div class="swiper-wrapper mb-14">
                 @foreach ($refrigerators as $refrigerator)
                 <div class="swiper-slide">
                     <x-product-card :refrigerator="$refrigerator"></x-product-card>
                 </div>
                 @endforeach
+            </div>
+            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+            <div class="swiper-button-prev custom-button-prev"></div>
+            <div class="swiper-button-next custom-button-next"></div>
         </div>
-        <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
-    </div>
 
     </div>
 
@@ -36,16 +38,18 @@
         </div>
 
         {{-- Product Card Slider (Swiper) --}}
-        <div class="swiper product-swiper my-14">
+        <div class="swiper product-swiper-with-arrows my-14">
             <div class="swiper-wrapper mb-14">
                 @foreach ($refrigerators as $refrigerator)
                 <div class="swiper-slide">
                     <x-product-card :refrigerator="$refrigerator"></x-product-card>
                 </div>
                 @endforeach
+            </div>
+            <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
+            <div class="swiper-button-prev custom-button-prev"></div>
+            <div class="swiper-button-next custom-button-next"></div>
         </div>
-        <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
-    </div>
 
     </div>
 
@@ -56,7 +60,7 @@
         </div>
 
         {{-- Product Card Slider (Swiper) --}}
-        <div class="swiper product-swiper my-14">
+        <div class="swiper product-swiper-with-arrows my-14">
             <div class="swiper-wrapper mb-14">
 
                 <div class="swiper-slide">
@@ -123,6 +127,8 @@
 
             </div>
             <div class="product-swiper-pagination swiper-pagination bullet-gray"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </x-app-layout>
