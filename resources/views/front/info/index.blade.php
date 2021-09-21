@@ -38,21 +38,21 @@
 
     {{-- Example Of Independent Refrigerators --}}
     <div class="section">
-        <div class="section-header-lime">
+        {{-- <div class="section-header-lime">
             EXEMPEL PÅ FRISTÅENDE KYLSKÅP
-        </div>
+        </div> --}}
 
         {{-- Product Card Slider (Swiper) --}}
-        <div class="swiper product-swiper my-14">
+        {{-- <div class="swiper product-swiper my-14">
             <div class="swiper-wrapper mb-14">
                 @for ($i = 0; $i < 9; $i++)
-                <div class="swiper-slide">
-                    <x-product-card></x-product-card>
-                </div>
+                    <div class="swiper-slide">
+                        <x-product-card></x-product-card>
+                    </div>
                 @endfor
             </div>
             <div class="product-swiper-pagination swiper-pagination bullet-lime"></div>
-        </div>
+        </div> --}}
 
     </div>
 </x-app-layout>

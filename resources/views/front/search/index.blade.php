@@ -3,13 +3,16 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
 
         {{-- Product Card --}}
-        @for ($i = 0; $i < 9; $i++) <x-product-card>
+        {{-- @for ($i = 0; $i < 9; $i++) <x-product-card>
             </x-product-card>
-            @endfor
+            @endfor --}}
 
     </div>
+    <div class="grid">
+        <p class="text-center">No Result Found</p>
+    </div>
 
-    <nav class="my-20">
+    {{-- <nav class="my-20">
         <ul class="flex justify-center">
             <li>
                 <a href="javascript:void(0)" class="pagination-link">
@@ -28,5 +31,5 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> --}}
 </x-app-layout>
