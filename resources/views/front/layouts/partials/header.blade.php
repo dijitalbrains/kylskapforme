@@ -20,9 +20,21 @@
         <a href="{{ url('favourite') }}">
             <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
         </a>
-        <a href="{{ route('login') }}"
-            class="ml-4 xl:ml-8 xl:mr-12 border-b-2 border-lime-350 pb-1 uppercase font-bold hover:border-black">
-            Logga in / Registrera Dig
-        </a>
+
+        @auth
+            <a href="javascript:void(0)" class="login-link" @click.prevent="document.getElementById('logout-form').submit()">
+                Logga ut
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                @csrf
+            </form>
+        @endauth
+
+        @guest
+            <a href="{{ route('login') }}" class="login-link">
+                Logga in / Registrera Dig
+            </a>
+        @endguest
     </div>
 </header>

@@ -131,6 +131,10 @@
         @apply bg-lime-350 text-black;
     }
 
+    .login-link {
+        @apply ml-4 xl:ml-8 xl:mr-12 border-b-2 border-lime-350 pb-1 uppercase font-bold hover:border-black;
+    }
+
     /* sm: 640px */
     @media (min-width: 640px) {
         header {
