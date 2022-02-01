@@ -38,7 +38,7 @@
                     @if ($i == 0)
                     <x-svg-chevron direction="right" class="w-4 inline absolute -ml-5 mt-0.5"></x-svg-chevron>
                     @endif
-                    <a href="{{ $store->pivot->product_url }}" class="hover:text-lime-350">
+                    <a href="{{ $store->pivot->product_url }}" class="hover:text-lime-350" target="_blank">
                         {{ $store->name }}
                     </a>
                 </div>
@@ -59,75 +59,75 @@
 
     <div class="border-t-2 border-b-2 border-lime-350 py-2 my-5">
         <div class="ml-1 font-light">
-            Färg: {{ $refrigerator->color_name }}<br>
-            Kylkapacitet: {{ $refrigerator->displayed_volume }}<br>
-            Höjd: {{ $refrigerator->height }}<br>
-            Bredd: {{ $refrigerator->width }}
+            <span class="font-medium">Färg:</span> {{ $refrigerator->color_name }}<br>
+            <span class="font-medium">Kylkapacitet:</span> {{ $refrigerator->displayed_volume }}<br>
+            <span class="font-medium">Höjd:</span> {{ $refrigerator->height }}<br>
+            <span class="font-medium">Bredd:</span> {{ $refrigerator->width }}
         </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         <div>
-            <div class="font-bold">PRODUKTEGENSKAPER</div>
+            <div class="font-bold uppercase">PRODUKTEGENSKAPER</div>
             <p class="font-light">
-                Produktgrupp: Kylskåp<br>
-                Produktnamn: SW8 AM2Y XR 2<br>
-                EAN-kod: 8003437614132<br>
-                Konstruktion: freestanding<br>
-                Installationstyp: Fristående<br>
-                Typ av reglage: Elektronisk<br>
-                Typ av kontrollinställning och signalenheter: External alarm<br>
-                Färg: Rostfri<br>
-                Anslutningseffekt: 100<br>
-                Ström: 0,7<br>
-                Spänning: 220-240<br>
-                Frekvens: 50<br>
-                Nätkabelns längd: 245<br>
-                Elkontakt: Schuko<br>
-                Nettovolym, totalt: 364<br>
-                Stjärnmärkning: N/A<br>
-                Ange antalet fristående kylsystem: 1<br>
-                Höjd: 1875<br>
-                Bredd: 595<br>
-                Djup: 630<br>
-                Djup med dörren öppeni 90° -<br>
-                Max höjdjustering: 0<br>
-                Nettovikt: 62<br>
-                Gångjärn: Höger omhängbar
+                <span class="font-medium">Produktgrupp:</span> Kylskåp<br>
+                <span class="font-medium">Produktnamn:</span> SW8 AM2Y XR 2<br>
+                <span class="font-medium">EAN-kod:</span> 8003437614132<br>
+                <span class="font-medium">Konstruktion:</span> freestanding<br>
+                <span class="font-medium">Installationstyp:</span> Fristående<br>
+                <span class="font-medium">Typ av reglage:</span> Elektronisk<br>
+                <span class="font-medium">Typ av kontrollinställning och signalenheter:</span> External alarm<br>
+                <span class="font-medium">Färg:</span> Rostfri<br>
+                <span class="font-medium">Anslutningseffekt:</span> 100<br>
+                <span class="font-medium">Ström:</span> 0,7<br>
+                <span class="font-medium">Spänning:</span> 220-240<br>
+                <span class="font-medium">Frekvens:</span> 50<br>
+                <span class="font-medium">Nätkabelns längd:</span> 245<br>
+                <span class="font-medium">Elkontakt:</span> Schuko<br>
+                <span class="font-medium">Nettovolym, totalt:</span> 364<br>
+                <span class="font-medium">Stjärnmärkning:</span> N/A<br>
+                <span class="font-medium">Ange antalet fristående kylsystem:</span> 1<br>
+                <span class="font-medium">Höjd:</span> 1875<br>
+                <span class="font-medium">Bredd:</span> 595<br>
+                <span class="font-medium">Djup:</span> 630<br>
+                <span class="font-medium">Djup med dörren öppeni 90°:</span> -<br>
+                <span class="font-medium">Max höjdjustering:</span> 0<br>
+                <span class="font-medium">Nettovikt:</span> 62<br>
+                <span class="font-medium">Gångjärn:</span> Höger omhängbar
             </p>
         </div>
 
         <div>
-            <div class="font-bold">TEKNISKA DATA</div>
+            <div class="font-bold uppercase">TEKNISKA DATA</div>
             <p class="font-light">
-                Reglerbar temperatur: Ja<br>
-                Varningssignal / driftfel Ljus + ljud<br>
-                Avfrostning kyl: Automatisk<br>
-                Snabbkylning: Ja<br>
-                Fläkt i kylen: Ja<br>
-                Finns flaskhylla/-or? Saknas<br>
-                Är dörren låsbar? -<br>
-                Antal hyllor: 6<br>
-                Antal flyttbara hyllor: 4<br>
-                Material, hyllor: Glas<br>
-                Kyltermometer: Analog
+                <span class="font-medium">Reglerbar temperatur:</span> Ja<br>
+                <span class="font-medium">Varningssignal / driftfel Ljus + ljud:</span> -<br>
+                <span class="font-medium">Avfrostning kyl:</span> Automatisk<br>
+                <span class="font-medium">Snabbkylning:</span> Ja<br>
+                <span class="font-medium">Fläkt i kylen:</span> Ja<br>
+                <span class="font-medium">Finns flaskhylla/-or?:</span> Saknas<br>
+                <span class="font-medium">Är dörren låsbar?:</span> -<br>
+                <span class="font-medium">Antal hyllor:</span> 6<br>
+                <span class="font-medium">Antal flyttbara hyllor:</span> 4<br>
+                <span class="font-medium">Material, hyllor:</span> Glas<br>
+                <span class="font-medium">Kyltermometer:</span> Analog
             </p>
-            <div class="font-bold">ENERGI & PRESTANDA</div>
+            <div class="font-bold uppercase">ENERGI & PRESTANDA</div>
             <p class="font-light">
-                Temperaturstegringstid: 0<br>
-                Klimatklass: SN-T<br>
-                Buller: 38<br>
-                Automatisk avfrostning: Saknas<br>
-                Max omgivande temperatur: 0<br>
-                Min omgivande temperatur: 0
+                <span class="font-medium">Temperaturstegringstid:</span> 0<br>
+                <span class="font-medium">Klimatklass:</span> SN-T<br>
+                <span class="font-medium">Buller:</span> 38<br>
+                <span class="font-medium">Automatisk avfrostning:</span> Saknas<br>
+                <span class="font-medium">Max omgivande temperatur:</span> 0<br>
+                <span class="font-medium">Min omgivande temperatur:</span> 0
             </p>
         </div>
 
         <div>
-            <div class="font-bold">Specifikationer</div>
+            <div class="font-bold uppercase">Specifikationer</div>
             <p class="font-light">
-                Förbrukning<br>
+                <span class="font-bold">Förbrukning</span><br>
                 Energiklass<br>
                 E<br>
                 Energiklass<br>

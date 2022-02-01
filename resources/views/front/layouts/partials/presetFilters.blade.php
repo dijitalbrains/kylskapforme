@@ -11,13 +11,6 @@
 
     <div>
         <a href="{{url('search')}}" class="border-white inline-flex filter-preset-link filter-preset-max-w">
-            <span class="truncate">Fristående kylskåP</span>
-            <span class="filter-preset-count">250 st</span>
-        </a>
-    </div>
-
-    <div>
-        <a href="{{url('search')}}" class="border-white inline-flex filter-preset-link filter-preset-max-w">
             <span class="truncate">FRISTÅENDE KYLSKÅP</span>
             <span class="filter-preset-count">250 st</span>
         </a>
