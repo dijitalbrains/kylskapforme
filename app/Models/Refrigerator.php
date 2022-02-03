@@ -77,4 +77,9 @@ class Refrigerator extends Model
     {
         return $this->belongsToMany(Property::class, 'properties_refrigerators');
     }
+
+    public function userFavoriteRefrigerator()
+    {
+        return $this->hasMany(UserFavoriteRefrigerator::class);
+    }
 }

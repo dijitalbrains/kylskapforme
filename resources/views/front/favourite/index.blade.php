@@ -1,10 +1,15 @@
 <x-app-layout>
     {{-- Products Grid --}}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-        <p>this is favourite page</p>
+
+        {{-- Product Card --}}
+        @foreach ($refrigerators as $refrigerator)
+            <x-product-card :refrigerator="$refrigerator"></x-product-card>
+        @endforeach
+
     </div>
 
-    <nav class="my-20">
+    {{-- <nav class="my-20">
         <ul class="flex justify-center">
             <li>
                 <a href="javascript:void(0)" class="pagination-link">
@@ -23,5 +28,5 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> --}}
 </x-app-layout>

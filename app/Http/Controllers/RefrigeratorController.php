@@ -25,4 +25,12 @@ class RefrigeratorController extends Controller
     {
         UserFavoriteRefrigerator::where(['user_id' => Auth::id(), 'refrigerator_id' => $request->refrigerator_id])->delete();
     }
+
+    public function showFavorite()
+    {
+        $refrigerators = Refrigerator::with(['userFavoriteRefrigerator'])->whereHas('userFavoriteRefrigerator', function ($q) {
+            $q->where('user_id', Auth::id());
+        })->get();
+        return view('front.favourite.index', compact('refrigerators'));
+    }
 }
