@@ -1,8 +1,10 @@
 import Alpine from "alpinejs";
+import axios from "axios";
 import Swiper, { Pagination, Navigation } from "swiper";
 
 window.Alpine = Alpine;
 Alpine.start();
+window.axios = axios;
 
 import "swiper/css";
 import "swiper/css/pagination";
