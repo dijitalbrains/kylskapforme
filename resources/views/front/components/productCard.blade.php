@@ -1,10 +1,12 @@
-<div class="relative">
+<div class="relative" x-data="Product()">
 
     {{-- Favourite --}}
-    <a href="javascript:void(0)" class="card-favourite">
-        <x-svg-heart-outline class="heart-outline"></x-svg-heart-outline>
-    </a>
-
+    @auth
+        <a href="javascript:void(0)" class="card-favourite" @click="toggleFavorite({{ $refrigerator->id }}, $el)">
+            <x-svg-heart-outline class="heart-outline {{ $refrigerator->isFavorite ? 'favourite' : '' }}">
+            </x-svg-heart-outline>
+        </a>
+    @endauth
     {{-- Image --}}
     <a href="product/{{ $refrigerator->id }}">
         <img src="{{ $refrigerator->default_image }}" class="h-72 m-auto mb-4">

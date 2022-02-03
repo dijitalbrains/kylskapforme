@@ -6,6 +6,7 @@ use App\Casts\UnitValue;
 use App\Constants;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Refrigerator extends Model
 {
@@ -38,6 +39,10 @@ class Refrigerator extends Model
         return $this->stores->min('pivot.price');
     }
 
+    public function getIsFavoriteAttribute()
+    {
+        return $this->hasMany(UserFavoriteRefrigerator::class)->where(['refrigerator_id' => $this->id,'user_id'=> Auth::id()])->exists();
+    }
     public function color()
     {
         return $this->belongsTo(Color::class);
