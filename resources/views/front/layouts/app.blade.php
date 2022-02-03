@@ -69,6 +69,17 @@
                 }
             };
         }
+
+        function Product() {
+            return {
+                toggleFavorite(refrigerator_id, element) {
+                    axios.post(element.children[0].classList.toggle("favourite") ? 'api/add-favorite' :
+                        'api/remove-favorite', {
+                            refrigerator_id
+                        });
+                }
+            }
+        }
     </script>
 </body>
 

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" x-data="Product()">
         <div class="col-span-2">
             <div class="p-5">
                 {{-- Image Slider (Swiper) --}}
@@ -18,8 +18,9 @@
             </div>
 
             <div class="flex justify-end space-x-2 my-4">
-                <a href="javascript:void(0)">
-                    <x-svg-heart-outline class="heart-outline"> </x-svg-heart-outline>
+                <a href="javascript:void(0)" @click="toggleFavorite({{ $refrigerator->id }}, $el)">
+                    <x-svg-heart-outline class="heart-outline {{ $refrigerator->isFavorite ? 'favourite' : '' }}">
+                    </x-svg-heart-outline>
                 </a>
                 <a href="javascript:void(0)">
                     <x-svg-share class="heart-outline"> </x-svg-share>
