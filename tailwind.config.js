@@ -50,6 +50,7 @@ module.exports = {
             borderWidth: ["hover"],
             opacity: ["disabled"],
             fill: ["hover"],
+            stroke: ["hover"],
         },
     },
     plugins: [
