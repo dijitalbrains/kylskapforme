@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Refrigerator;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class ViewServiceProvider extends ServiceProvider
@@ -23,6 +25,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $refrigerators_count = Refrigerator::count();
+        View::share('refrigerators_count', $refrigerators_count);
     }
 }

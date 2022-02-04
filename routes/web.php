@@ -32,9 +32,7 @@ Route::get('/search', function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/favourite', function () {
-        return view('front.favourite.index');
-    });
+    Route::get('/favourite', [RefrigeratorController::class, 'showFavorite']);
 });
 
 require __DIR__.'/auth.php';

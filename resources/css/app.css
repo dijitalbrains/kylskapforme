@@ -91,6 +91,9 @@
     .heart-outline {
         @apply w-8 h-8 border border-black rounded-full hover:border-lime-350 hover:fill-current hover:text-lime-350 p-1;
     }
+    .heart-outline.favourite {
+        @apply border-lime-350 fill-current text-lime-350 hover:border-black hover:stroke-current hover:text-black;
+    }
 
     .btn-round-black {
         @apply rounded-full bg-black text-lime-350 font-medium px-10 py-3 mt-4 hover:text-white hover:shadow-lg;

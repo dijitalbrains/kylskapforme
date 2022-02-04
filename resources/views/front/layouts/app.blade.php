@@ -137,6 +137,30 @@
                 }
             };
         }
+
+        function Product() {
+            return {
+                toggleFavorite(refrigerator_id, element) {
+                    axios.post(element.children[0].classList.toggle("favourite") ? 'api/add-favorite' :
+                        'api/remove-favorite', {
+                            refrigerator_id
+                        }).then(() => {
+                        if (window.location.pathname == '/favourite') {
+                            if (element.parentElement.parentElement.childElementCount == 1) {
+                                element.parentElement.parentElement.parentElement.insertAdjacentHTML('afterend',
+                                    '<p class="text-center">No Record Found</p>');
+                            }
+                            element.parentElement.remove();
+                        }
+                    }).catch(function(error) {
+                        if (error.response.status == 401) {
+                            element.children[0].classList.toggle("favourite")
+                            window.location = '/login';
+                        }
+                    });
+                }
+            }
+        }
     </script>
 </body>
 
