@@ -8,7 +8,7 @@
         <div class="flex justify-between flex-grow mr-3">
             <span>Sök ditt kylskåp:</span>
             <input type="text" class="flex-grow mx-2 bg-transparent focus:outline-none">
-            <span>5899 kylskåp</span>
+            <span>{{ $refrigerators_count }} kylskåp</span>
         </div>
         <span>
             <x-svg-search-circle class="h-8 w-8 fill-current text-lime-350"></x-svg-search-circle>
