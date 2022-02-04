@@ -12,7 +12,7 @@
 
         {{-- Header --}}
         <div class="flex justify-between bg-black text-white font-bold p-3">
-            <span class="mt-0.5">Rensa</span>
+            <span class="mt-0.5" @click="clearAll()">Rensa</span>
             <span class="uppercase mt-0.5">Alla filter</span>
 
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24"
@@ -94,7 +94,7 @@
                 </div>
                 <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2 text-xs">
 
-                    <x-range-slider :range-min="0" :range-max="100000" :min="0" :max="100000"></x-range-slider>
+                    <x-range-slider filter="price"></x-range-slider>
 
                 </div>
             </div>
@@ -208,20 +208,19 @@
                 <div x-show="open" class="font-bold mt-4 text-coolGray-600">Höjd</div>
                 <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                    <x-range-slider :range-min="0" :range-max="200" :min="0" :max="200" class="mb-5">
-                    </x-range-slider>
+                    <x-range-slider filter="height"></x-range-slider>
 
                     <div class="space-y-2">
                         <label class="block">
-                            <input type="radio" name="height" checked class="form-radio" />
+                            <input type="radio" name="height" class="form-radio" @click="setRangSliderMax('height', 85)" />
                             <span>Upp till 85 cm</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="height" class="form-radio" />
+                            <input type="radio" name="height" class="form-radio" @click="setRangSliderMinMax('height', 85, 185)" />
                             <span>85 cm - 185 cm</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="height" class="form-radio" />
+                            <input type="radio" name="height" class="form-radio" @click="setRangSliderMin('height', 185)" />
                             <span>Minst 185 cm</span>
                         </label>
                     </div>
@@ -232,20 +231,19 @@
                 <div x-show="open" class="font-bold mt-4 text-coolGray-600">Bredd</div>
                 <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                    <x-range-slider :range-min="10" :range-max="110" :min="10" :max="110" class="mb-5">
-                    </x-range-slider>
+                    <x-range-slider filter="width"></x-range-slider>
 
                     <div class="space-y-2">
                         <label class="block">
-                            <input type="radio" name="width" checked class="form-radio" />
+                            <input type="radio" name="width" class="form-radio" @click="setRangSliderMax('width', 54)" />
                             <span>Upp till 54 cm</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="width" class="form-radio" />
+                            <input type="radio" name="width" class="form-radio" @click="setRangSliderMinMax('width', 54, 60)" />
                             <span>54 cm - 60 cm</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="width" class="form-radio" />
+                            <input type="radio" name="width" class="form-radio" @click="setRangSliderMin('width', 60)" />
                             <span>Minst 60 cm</span>
                         </label>
                     </div>
@@ -256,20 +254,19 @@
                 <div x-show="open" class="font-bold mt-4 text-coolGray-600">Djup</div>
                 <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                    <x-range-slider :range-min="0" :range-max="780" :min="0" :max="70" class="mb-5">
-                    </x-range-slider>
+                    <x-range-slider filter="depth"></x-range-slider>
 
                     <div class="space-y-2">
                         <label class="block">
-                            <input type="radio" name="depth" checked class="form-radio" />
+                            <input type="radio" name="depth" class="form-radio" @click="setRangSliderMax('depth', 55)" />
                             <span>Upp till 55 cm</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="depth" class="form-radio" />
+                            <input type="radio" name="depth" class="form-radio" @click="setRangSliderMinMax('depth', 55, 65)" />
                             <span>55 cm - 65 cm</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="depth" class="form-radio" />
+                            <input type="radio" name="depth" class="form-radio" @click="setRangSliderMin('depth', 65)" />
                             <span>Minst 65 cm</span>
                         </label>
                     </div>
@@ -280,20 +277,19 @@
                 <div x-show="open" class="font-bold mt-4 text-coolGray-600">Vikt</div>
                 <div role="menu" x-show="open" class="mt-2 mb-8 space-y-2 text-xs">
 
-                    <x-range-slider :range-min="0" :range-max="200" :min="0" :max="200" class="mb-5">
-                    </x-range-slider>
+                    <x-range-slider filter="weight"></x-range-slider>
 
                     <div class="space-y-2">
                         <label class="block">
-                            <input type="radio" name="weight" checked class="form-radio" />
+                            <input type="radio" name="weight" class="form-radio" @click="setRangSliderMax('weight', 32)" />
                             <span>Upp till 32 kg</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="weight" class="form-radio" />
+                            <input type="radio" name="weight" class="form-radio" @click="setRangSliderMinMax('weight', 32, 73)" />
                             <span>32 kg - 73 kg</span>
                         </label>
                         <label class="block">
-                            <input type="radio" name="weight" class="form-radio" />
+                            <input type="radio" name="weight" class="form-radio" @click="setRangSliderMin('weight', 73)" />
                             <span>Minst 73 kg</span>
                         </label>
                     </div>
@@ -314,7 +310,7 @@
                 </div>
                 <div role="menu" x-show="open" class="mt-4 mb-8 space-y-2.5 text-xs">
                     <label class="block">
-                        <input type="radio" name="color" checked class="form-radio" />
+                        <input type="radio" name="color" class="form-radio" />
                         <span>Beige</span>
                     </label>
                     <label class="block">

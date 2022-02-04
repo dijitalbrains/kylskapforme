@@ -11,7 +11,7 @@
     <title>Kylskap For Me @yield('title')</title>
 </head>
 
-<body x-data="{ isSidebarOpen: false }" :class="{'overflow-y-hidden' : isSidebarOpen }">
+<body x-data="sideBar()" :class="{'overflow-y-hidden' : isSidebarOpen }">
 
     {{-- Container --}}
     <div class="container mx-auto px-4">
@@ -38,33 +38,101 @@
     @include('front.layouts.partials.footer')
 
     <script>
-        function rangeSlider(rangeMin, rangeMax, min, max) {
+
+        function sideBar() {
             return {
-                range: rangeMax - rangeMin,
-                rangeMin,
-                rangeMax,
-                min,
-                max,
+                isSidebarOpen: false,
+                filters: {
+                    price: {
+                        min: 0,
+                        max: 100000,
+                        rangeMin: 0,
+                        rangeMax: 100000
+                    },
+                    height: {
+                        min: 0,
+                        max: 200,
+                        rangeMin: 0,
+                        rangeMax: 200
+                    },
+                    width: {
+                        min: 10,
+                        max: 110,
+                        rangeMin: 10,
+                        rangeMax: 110
+                    },
+                    depth: {
+                        min: 0,
+                        max: 70,
+                        rangeMin: 0,
+                        rangeMax: 70
+                    },
+                    weight: {
+                        min: 0,
+                        max: 200,
+                        rangeMin: 0,
+                        rangeMax: 200
+                    }
+                },
+
+                setRangSliderMin(slider, min){
+                    this.resetRangeSlider(slider);
+                    this.filters[slider].min = min;
+                },
+
+                setRangSliderMax(slider, max){
+                    this.resetRangeSlider(slider);
+                    this.filters[slider].max = max;
+                },
+                setRangSliderMinMax(slider, min, max){
+                    this.resetRangeSlider(slider);
+                    this.filters[slider].min = min;
+                    this.filters[slider].max = max;
+                },
+
+                clearAll(){
+                    this.resetRangeSlider('price');
+                    this.resetRangeSlider('height');
+                    this.resetRangeSlider('width');
+                    this.resetRangeSlider('depth');
+                    this.resetRangeSlider('weight');
+                },
+
+                resetRangeSlider(slider){
+                    this.filters[slider].min = this.filters[slider].rangeMin;
+                    this.filters[slider].max = this.filters[slider].rangeMax;
+                }
+            };
+        }
+
+        function rangeSlider() {
+            return {
+                range: null,
                 dragLeft: false,
                 dragRight: false,
+                dragLeftPercent: 0,
+                dragRightPercent: 0,
 
-                handleThumbMouseMove: function(e) {
+                initSlider(filter) {
+                    this.range = filter.rangeMax - filter.rangeMin;
+                },
+
+                handleThumbMouseMove: function(e, filter) {
                     if (!this.dragLeft && !this.dragRight) return;
-
+                    
                     const thumbEl = this.dragLeft ? this.$refs.minThumb : this.$refs.maxThumb;
-
                     const sliderRect = this.$refs.sliderEl.getBoundingClientRect();
 
                     let r = ((e.type == 'touchmove' ? e.touches[0].clientX : e.clientX) - sliderRect.left) / sliderRect.width;
                     r = Math.max(0, Math.min(r, 1));
-                    const value = Math.floor(r * this.range + this.rangeMin);
+                    const value = Math.floor(r * this.range + filter.rangeMin);
 
                     if (this.dragLeft) {
-                        this.min = value;
-                        this.max = Math.max(this.min, this.max);
+                        filter.min = value;
+                        filter.max = Math.max(filter.min, filter.max);
                     } else {
-                        this.max = value;
-                        this.min = Math.min(this.min, this.max);
+                        filter.max = value;
+                        filter.min = Math.min(filter.min, filter.max);
                     }
                 }
             };
