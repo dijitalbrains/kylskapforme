@@ -9,6 +9,11 @@
 
     </div>
 
+    @if (!count($refrigerators))
+        <p class="text-center">No Record Found</p>
+
+    @endif
+
     {{-- <nav class="my-20">
         <ul class="flex justify-center">
             <li>
