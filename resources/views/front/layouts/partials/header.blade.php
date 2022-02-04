@@ -17,11 +17,10 @@
 
     {{-- Login/Register --}}
     <div class="flex items-center bg-white ml-auto mr-5 mt-2 lg:m-0">
-
+        <a href="{{ url('favourite') }}">
+            <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
+        </a>
         @auth
-            <a href="{{ url('favourite') }}">
-                <x-svg-heart class="h-8 w-8 fill-current text-lime-350"></x-svg-heart>
-            </a>
             <a href="javascript:void(0)" class="login-link"
                 @click.prevent="document.getElementById('logout-form').submit()">
                 Logga ut

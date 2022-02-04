@@ -84,6 +84,11 @@
                             }
                             element.parentElement.remove();
                         }
+                    }).catch(function(error) {
+                        if (error.response.status == 401) {
+                            element.children[0].classList.toggle("favourite")
+                            window.location = '/login';
+                        }
                     });
                 }
             }

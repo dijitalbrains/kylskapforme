@@ -18,12 +18,10 @@
             </div>
 
             <div class="flex justify-end space-x-2 my-4">
-                @auth
-                    <a href="javascript:void(0)" @click="toggleFavorite({{ $refrigerator->id }}, $el)">
-                        <x-svg-heart-outline class="heart-outline {{ $refrigerator->isFavorite ? 'favourite' : '' }}">
-                        </x-svg-heart-outline>
-                    </a>
-                @endauth
+                <a href="javascript:void(0)" @click="toggleFavorite({{ $refrigerator->id }}, $el)">
+                    <x-svg-heart-outline class="heart-outline {{ $refrigerator->isFavorite ? 'favourite' : '' }}">
+                    </x-svg-heart-outline>
+                </a>
                 <a href="javascript:void(0)">
                     <x-svg-share class="heart-outline"> </x-svg-share>
                 </a>
