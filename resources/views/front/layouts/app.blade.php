@@ -53,26 +53,35 @@
                         min: 0,
                         max: 200,
                         rangeMin: 0,
-                        rangeMax: 200
+                        rangeMax: 200,
+                        preset: null
                     },
                     width: {
                         min: 10,
                         max: 110,
                         rangeMin: 10,
-                        rangeMax: 110
+                        rangeMax: 110,
+                        preset: null
                     },
                     depth: {
                         min: 0,
                         max: 70,
                         rangeMin: 0,
-                        rangeMax: 70
+                        rangeMax: 70,
+                        preset: null
                     },
                     weight: {
                         min: 0,
                         max: 200,
                         rangeMin: 0,
-                        rangeMax: 200
-                    }
+                        rangeMax: 200,
+                        preset: null
+                    },
+                    type: null,
+                    rea: null,
+                    style: null,
+                    color: null,
+                    household_size: null
                 },
 
                 setRangSliderMin(slider, min){
@@ -91,6 +100,11 @@
                 },
 
                 clearAll(){
+                    this.filters.type = null;
+                    this.filters.rea = null;
+                    this.filters.style = null;
+                    this.filters.color = null;
+                    this.filters.household_size = null;
                     this.resetRangeSlider('price');
                     this.resetRangeSlider('height');
                     this.resetRangeSlider('width');
@@ -101,6 +115,7 @@
                 resetRangeSlider(slider){
                     this.filters[slider].min = this.filters[slider].rangeMin;
                     this.filters[slider].max = this.filters[slider].rangeMax;
+                    this.filters[slider].preset = null;
                 }
             };
         }
@@ -134,6 +149,9 @@
                         filter.max = value;
                         filter.min = Math.min(filter.min, filter.max);
                     }
+
+                    if( 'preset' in filter)
+                        filter.preset = null;
                 }
             };
         }
