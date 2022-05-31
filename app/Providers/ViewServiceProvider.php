@@ -25,7 +25,9 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $refrigerators_count = Refrigerator::count();
-        View::share('refrigerators_count', $refrigerators_count);
+        View::composer('*', function ($view) {
+            $refrigerators_count = Refrigerator::count();
+            $view->with('refrigerators_count', $refrigerators_count);
+        });
     }
 }
